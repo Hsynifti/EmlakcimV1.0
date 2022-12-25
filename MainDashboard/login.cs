@@ -64,6 +64,18 @@ namespace MainDashboard
         {
             appexit();
         }
+
+        private void txt_pass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btn_login.PerformClick();
+        }
+
+        private void txt_username_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btn_login.PerformClick();
+        }
     }
     
 
