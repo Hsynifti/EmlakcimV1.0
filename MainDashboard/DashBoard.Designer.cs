@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblKullanici = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_Logout = new Guna.UI2.WinForms.Guna2Button();
@@ -300,6 +301,7 @@
             this.Controls.Add(this.panelDashboard);
             this.Controls.Add(this.guna2Panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DashBoard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Emlakçım";
