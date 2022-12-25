@@ -48,9 +48,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Guna.Charts.WinForms, Version=1.0.4.0, Culture=neutral, PublicKeyToken=70866663edbc6595, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.Charts.WinForms.1.0.4\lib\net40\Guna.Charts.WinForms.dll</HintPath>
-    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
@@ -117,11 +114,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UC_Satis.cs">
+    <Compile Include="UC_Musteri_Islemleri.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Satis.Designer.cs">
-      <DependentUpon>UC_Satis.cs</DependentUpon>
+    <Compile Include="UC_Musteri_Islemleri.Designer.cs">
+      <DependentUpon>UC_Musteri_Islemleri.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Satislar.cs">
       <SubType>UserControl</SubType>
@@ -163,8 +160,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UC_Satis.resx">
-      <DependentUpon>UC_Satis.cs</DependentUpon>
+    <EmbeddedResource Include="UC_Musteri_Islemleri.resx">
+      <DependentUpon>UC_Musteri_Islemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Satislar.resx">
       <DependentUpon>UC_Satislar.cs</DependentUpon>
@@ -212,6 +209,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\c6290cbd497e76e536931568aefd8b60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

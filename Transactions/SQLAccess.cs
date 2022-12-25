@@ -11,7 +11,7 @@ namespace Transactions
     {
         public SqlConnection baglanti()
         {
-            SqlConnection conn = new SqlConnection("Data Source=MAZLUM;Initial Catalog=Emlak;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-T7UDV2S;Initial Catalog=Emlak;Integrated Security=True");
             conn.Open();
             return conn;
         }

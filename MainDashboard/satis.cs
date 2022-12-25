@@ -70,7 +70,10 @@ namespace MainDashboard
                     komut1.Parameters.AddWithValue("@musteriid", MusteriID);
                     komut1.ExecuteNonQuery();
                     bgl.baglanti().Close();
+
+
                     MessageBox.Show("Emlak Başarıyla Devredildi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
                 bgl.baglanti().Close();
                 txtMusteriadi.Text = txtMusteriSoyadi.Text = txtMusteriIletisim.Text = "";
@@ -78,26 +81,6 @@ namespace MainDashboard
             }
         }
 
-        private void btnEkle_Click(object sender, EventArgs e)
-        {
-
-            if (txtAdi.Text != "" && txtSoyadi.Text != "")
-            {
-                SqlCommand komut = new SqlCommand("insert into T_Musteri (Musteriadi,Musterisoyadi,Iletisim) values (@adi,@soyadi,@iletisim)", bgl.baglanti());
-                komut.Parameters.AddWithValue("@adi", txtAdi.Text);
-                komut.Parameters.AddWithValue("@soyadi", txtSoyadi.Text);
-                komut.Parameters.AddWithValue("@iletisim", txtIletisim.Text);
-                komut.ExecuteNonQuery();
-                bgl.baglanti().Close();
-                MessageBox.Show("Müşteri Başarıyla Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtAdi.Text = txtSoyadi.Text = txtIletisim.Text = "";
-                musterilistele();
-
-            }
-            else
-                MessageBox.Show("Lütfen Ad ve Soyad Bilgilerini Giriniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            musterilistele();
-        }
         private void dtgMusteriler_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int secilen = dtgMusteriler.SelectedCells[0].RowIndex;
@@ -105,6 +88,22 @@ namespace MainDashboard
             txtMusteriadi.Text = dtgMusteriler.Rows[secilen].Cells[1].Value.ToString();
             txtMusteriSoyadi.Text = dtgMusteriler.Rows[secilen].Cells[2].Value.ToString();
             txtMusteriIletisim.Text = dtgMusteriler.Rows[secilen].Cells[3].Value.ToString();
+            TCKmlktxt.Text = dtgMusteriler.Rows[secilen].Cells[4].Value.ToString();
+        }
+
+        private void txtIletisim_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtTcKmlk_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void dtgMusteriler_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

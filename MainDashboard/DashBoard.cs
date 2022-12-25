@@ -53,8 +53,8 @@ namespace MainDashboard
 
         private void btn_Satis_Click(object sender, EventArgs e)
         {
-            UC_Satis uC_Satis = new UC_Satis();
-            addusercontrol(uC_Satis);
+            UC_Musteri_Islemleri uC_MusteriEkle = new UC_Musteri_Islemleri();
+            addusercontrol(uC_MusteriEkle);
         }
 
         private void btn_Satislar_Click(object sender, EventArgs e)

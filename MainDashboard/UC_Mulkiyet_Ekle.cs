@@ -14,7 +14,7 @@ using Transactions;
 
 namespace MainDashboard 
 {
-    public partial class UC_Mulkiyet_Ekle :  UserControl 
+    public partial class UC_Mulkiyet_Ekle : UserControl
     {
         SQLAcces bgl = new SQLAcces();
         General genel = new General();
@@ -88,7 +88,21 @@ namespace MainDashboard
         {
 
         }
+
+        private void guna2ComboBox7_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (guna2ComboBox7.SelectedValue != null)
+            {
+                var item = guna2ComboBox7.SelectedItem.ToString();
+                lstEsyalar.Enabled = item == "Evet";
+            }
+            else
+            { 
+                lstEsyalar.Enabled = false;
+            }
+        }
         
+
     }
     
 }

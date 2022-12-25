@@ -35,7 +35,6 @@ namespace MainDashboard
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pnl_login = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_exit = new Guna.UI2.WinForms.Guna2Button();
             this.btn_login = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -47,7 +46,6 @@ namespace MainDashboard
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
-            this.pnl_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -64,43 +62,32 @@ namespace MainDashboard
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.btn_exit);
+            this.guna2Panel1.Controls.Add(this.btn_login);
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox3);
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox2);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel3);
+            this.guna2Panel1.Controls.Add(this.txt_pass);
+            this.guna2Panel1.Controls.Add(this.txt_username);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(644, 661);
+            this.guna2Panel1.Size = new System.Drawing.Size(889, 537);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::MainDashboard.Properties.Resources.login_bg;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(16, 15);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(12, 12);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(616, 631);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(462, 513);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
-            // 
-            // pnl_login
-            // 
-            this.pnl_login.Controls.Add(this.btn_exit);
-            this.pnl_login.Controls.Add(this.btn_login);
-            this.pnl_login.Controls.Add(this.guna2PictureBox3);
-            this.pnl_login.Controls.Add(this.guna2PictureBox2);
-            this.pnl_login.Controls.Add(this.guna2HtmlLabel3);
-            this.pnl_login.Controls.Add(this.txt_pass);
-            this.pnl_login.Controls.Add(this.txt_username);
-            this.pnl_login.Controls.Add(this.guna2HtmlLabel2);
-            this.pnl_login.Controls.Add(this.guna2HtmlLabel1);
-            this.pnl_login.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.pnl_login.Location = new System.Drawing.Point(675, 15);
-            this.pnl_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnl_login.Name = "pnl_login";
-            this.pnl_login.Size = new System.Drawing.Size(495, 631);
-            this.pnl_login.TabIndex = 4;
             // 
             // btn_exit
             // 
@@ -113,13 +100,12 @@ namespace MainDashboard
             this.btn_exit.FillColor = System.Drawing.Color.OrangeRed;
             this.btn_exit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_exit.ForeColor = System.Drawing.Color.White;
-            this.btn_exit.Location = new System.Drawing.Point(251, 377);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_exit.Location = new System.Drawing.Point(675, 319);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(199, 55);
-            this.btn_exit.TabIndex = 3;
+            this.btn_exit.Size = new System.Drawing.Size(149, 45);
+            this.btn_exit.TabIndex = 16;
             this.btn_exit.Text = "Çıkış";
-            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click_1);
             // 
             // btn_login
             // 
@@ -131,46 +117,42 @@ namespace MainDashboard
             this.btn_login.FillColor = System.Drawing.Color.ForestGreen;
             this.btn_login.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btn_login.ForeColor = System.Drawing.Color.White;
-            this.btn_login.Location = new System.Drawing.Point(52, 377);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_login.Location = new System.Drawing.Point(526, 319);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(191, 55);
-            this.btn_login.TabIndex = 2;
+            this.btn_login.Size = new System.Drawing.Size(143, 45);
+            this.btn_login.TabIndex = 15;
             this.btn_login.Text = "Giriş";
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click_1);
             // 
             // guna2PictureBox3
             // 
             this.guna2PictureBox3.Image = global::MainDashboard.Properties.Resources.pass;
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(40, 283);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(517, 243);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(49, 44);
+            this.guna2PictureBox3.Size = new System.Drawing.Size(37, 36);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 6;
+            this.guna2PictureBox3.TabIndex = 18;
             this.guna2PictureBox3.TabStop = false;
             // 
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Image = global::MainDashboard.Properties.Resources.c6290cbd497e76e536931568aefd8b60;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(40, 178);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(517, 158);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(49, 44);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(37, 36);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 5;
+            this.guna2PictureBox2.TabIndex = 17;
             this.guna2PictureBox2.TabStop = false;
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(40, 257);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(517, 222);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(30, 18);
-            this.guna2HtmlLabel3.TabIndex = 12;
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(24, 15);
+            this.guna2HtmlLabel3.TabIndex = 21;
             this.guna2HtmlLabel3.Text = "Şifre";
             // 
             // txt_pass
@@ -184,14 +166,13 @@ namespace MainDashboard
             this.txt_pass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_pass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_pass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_pass.Location = new System.Drawing.Point(40, 283);
-            this.txt_pass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_pass.Location = new System.Drawing.Point(517, 243);
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.PasswordChar = '●';
             this.txt_pass.PlaceholderText = "";
             this.txt_pass.SelectedText = "";
-            this.txt_pass.Size = new System.Drawing.Size(397, 44);
-            this.txt_pass.TabIndex = 1;
+            this.txt_pass.Size = new System.Drawing.Size(298, 36);
+            this.txt_pass.TabIndex = 14;
             this.txt_pass.TextOffset = new System.Drawing.Point(30, 0);
             this.txt_pass.UseSystemPasswordChar = true;
             // 
@@ -206,53 +187,47 @@ namespace MainDashboard
             this.txt_username.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_username.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_username.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_username.Location = new System.Drawing.Point(40, 178);
-            this.txt_username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_username.Location = new System.Drawing.Point(517, 158);
             this.txt_username.Name = "txt_username";
             this.txt_username.PasswordChar = '\0';
             this.txt_username.PlaceholderText = "";
             this.txt_username.SelectedText = "";
-            this.txt_username.Size = new System.Drawing.Size(397, 44);
-            this.txt_username.TabIndex = 0;
+            this.txt_username.Size = new System.Drawing.Size(298, 36);
+            this.txt_username.TabIndex = 13;
             this.txt_username.TextOffset = new System.Drawing.Point(30, 0);
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(40, 153);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(517, 137);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(75, 18);
-            this.guna2HtmlLabel2.TabIndex = 11;
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(60, 15);
+            this.guna2HtmlLabel2.TabIndex = 20;
             this.guna2HtmlLabel2.Text = "Kullanıcı Adı";
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(40, 41);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(517, 46);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(119, 40);
-            this.guna2HtmlLabel1.TabIndex = 10;
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(98, 33);
+            this.guna2HtmlLabel1.TabIndex = 19;
             this.guna2HtmlLabel1.Text = "Giriş Yap";
             // 
             // login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1185, 661);
-            this.Controls.Add(this.pnl_login);
+            this.ClientSize = new System.Drawing.Size(889, 537);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "login";
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
-            this.pnl_login.ResumeLayout(false);
-            this.pnl_login.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -265,17 +240,16 @@ namespace MainDashboard
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2Panel pnl_login;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private EventHandler btn_Exit_Click;
+        private Guna.UI2.WinForms.Guna2Button btn_exit;
+        private Guna.UI2.WinForms.Guna2Button btn_login;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txt_pass;
         private Guna.UI2.WinForms.Guna2TextBox txt_username;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2Button btn_login;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2Button btn_exit;
-        private EventHandler btn_Exit_Click;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }
 

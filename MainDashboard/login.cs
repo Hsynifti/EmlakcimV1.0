@@ -28,18 +28,6 @@ namespace MainDashboard
             Application.Exit();
         }
 
-        private void btn_login_Click(object sender, EventArgs e)
-        {
-            if (txt_username.Text == "" || txt_pass.Text == "")
-            {
-                MessageBox.Show("Lütfen boş bırakmayınız.");
-            }
-            else
-            {
-                giris();
-            }
-
-        }
         private void giris()
         {
             SqlCommand cmd = new SqlCommand("Select * from T_Kullanici where user_name=@username AND pass=@password", bgl.baglanti());
@@ -60,10 +48,21 @@ namespace MainDashboard
             bgl.baglanti().Close();
         }
 
-        private void btn_exit_Click(object sender, EventArgs e)
+        private void btn_login_Click_1(object sender, EventArgs e)
+        {
+            if (txt_username.Text == "" || txt_pass.Text == "")
+            {
+                MessageBox.Show("Lütfen boş bırakmayınız.");
+            }
+            else
+            {
+                giris();
+            }
+        }
+
+        private void btn_exit_Click_1(object sender, EventArgs e)
         {
             appexit();
-
         }
     }
     

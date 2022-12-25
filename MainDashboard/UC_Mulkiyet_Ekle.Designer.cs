@@ -42,14 +42,19 @@
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ComboBox11 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmbEmlak_Sehir = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.lstEsyalar = new System.Windows.Forms.CheckedListBox();
+            this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ComboBox7 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cmbEmlak_Durum = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2ComboBox6 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -62,11 +67,9 @@
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cmbEmlak_Sehir = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox11 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cmbEmlak_Durum = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2TextBox8 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -230,6 +233,9 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel22);
+            this.guna2Panel1.Controls.Add(this.guna2TextBox8);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel21);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.guna2ComboBox11);
@@ -243,7 +249,7 @@
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel20);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel15);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel3);
-            this.guna2Panel1.Controls.Add(this.checkedListBox1);
+            this.guna2Panel1.Controls.Add(this.lstEsyalar);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel19);
             this.guna2Panel1.Controls.Add(this.guna2ComboBox7);
             this.guna2Panel1.Controls.Add(this.cmbEmlak_Turu);
@@ -295,11 +301,29 @@
             this.guna2Button1.UseTransparentBackground = true;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // guna2ComboBox11
+            // 
+            this.guna2ComboBox11.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox11.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox11.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox11.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox11.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox11.ItemHeight = 30;
+            this.guna2ComboBox11.Items.AddRange(new object[] {
+            "İlçe seçiniz"});
+            this.guna2ComboBox11.Location = new System.Drawing.Point(20, 535);
+            this.guna2ComboBox11.Name = "guna2ComboBox11";
+            this.guna2ComboBox11.Size = new System.Drawing.Size(200, 36);
+            this.guna2ComboBox11.StartIndex = 0;
+            this.guna2ComboBox11.TabIndex = 7;
+            // 
             // guna2HtmlLabel18
             // 
             this.guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel18.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel18.Location = new System.Drawing.Point(698, 290);
+            this.guna2HtmlLabel18.Location = new System.Drawing.Point(702, 360);
             this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
             this.guna2HtmlLabel18.Size = new System.Drawing.Size(14, 27);
             this.guna2HtmlLabel18.TabIndex = 20;
@@ -316,7 +340,7 @@
             this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Location = new System.Drawing.Point(492, 290);
+            this.guna2TextBox4.Location = new System.Drawing.Point(496, 351);
             this.guna2TextBox4.Name = "guna2TextBox4";
             this.guna2TextBox4.PasswordChar = '\0';
             this.guna2TextBox4.PlaceholderText = "";
@@ -325,14 +349,30 @@
             this.guna2TextBox4.TabIndex = 17;
             this.guna2TextBox4.TextChanged += new System.EventHandler(this.guna2TextBox4_TextChanged);
             // 
+            // cmbEmlak_Sehir
+            // 
+            this.cmbEmlak_Sehir.BackColor = System.Drawing.Color.Transparent;
+            this.cmbEmlak_Sehir.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbEmlak_Sehir.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmlak_Sehir.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbEmlak_Sehir.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbEmlak_Sehir.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbEmlak_Sehir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbEmlak_Sehir.ItemHeight = 30;
+            this.cmbEmlak_Sehir.Location = new System.Drawing.Point(20, 372);
+            this.cmbEmlak_Sehir.Name = "cmbEmlak_Sehir";
+            this.cmbEmlak_Sehir.Size = new System.Drawing.Size(200, 36);
+            this.cmbEmlak_Sehir.TabIndex = 5;
+            this.cmbEmlak_Sehir.SelectionChangeCommitted += new System.EventHandler(this.guna2ComboBox10_SelectionChangeCommitted);
+            // 
             // guna2HtmlLabel17
             // 
             this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel17.Location = new System.Drawing.Point(492, 262);
+            this.guna2HtmlLabel17.Location = new System.Drawing.Point(496, 330);
             this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
-            this.guna2HtmlLabel17.Size = new System.Drawing.Size(25, 15);
+            this.guna2HtmlLabel17.Size = new System.Drawing.Size(53, 15);
             this.guna2HtmlLabel17.TabIndex = 18;
-            this.guna2HtmlLabel17.Text = "Fiyat";
+            this.guna2HtmlLabel17.Text = "Satış Fiyatı";
             // 
             // guna2HtmlLabel16
             // 
@@ -343,6 +383,15 @@
             this.guna2HtmlLabel16.TabIndex = 16;
             this.guna2HtmlLabel16.Text = "Oda Sayısı";
             // 
+            // guna2HtmlLabel20
+            // 
+            this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel20.Location = new System.Drawing.Point(20, 514);
+            this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
+            this.guna2HtmlLabel20.Size = new System.Drawing.Size(69, 15);
+            this.guna2HtmlLabel20.TabIndex = 18;
+            this.guna2HtmlLabel20.Text = "Emlağın Semti";
+            // 
             // guna2HtmlLabel15
             // 
             this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
@@ -352,12 +401,12 @@
             this.guna2HtmlLabel15.TabIndex = 14;
             this.guna2HtmlLabel15.Text = "Emlak İçindeki eşyaları belirtiniz!";
             // 
-            // checkedListBox1
+            // lstEsyalar
             // 
-            this.checkedListBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.checkedListBox1.CheckOnClick = true;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.lstEsyalar.BackColor = System.Drawing.SystemColors.Control;
+            this.lstEsyalar.CheckOnClick = true;
+            this.lstEsyalar.FormattingEnabled = true;
+            this.lstEsyalar.Items.AddRange(new object[] {
             "Buzdolabı",
             "Televizyon",
             "Oturma Grubu",
@@ -367,11 +416,20 @@
             "Bulaşık Makinesi",
             "Ocak",
             "Davlumbaz"});
-            this.checkedListBox1.Location = new System.Drawing.Point(492, 157);
-            this.checkedListBox1.MultiColumn = true;
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(286, 79);
-            this.checkedListBox1.TabIndex = 16;
+            this.lstEsyalar.Location = new System.Drawing.Point(492, 157);
+            this.lstEsyalar.MultiColumn = true;
+            this.lstEsyalar.Name = "lstEsyalar";
+            this.lstEsyalar.Size = new System.Drawing.Size(286, 79);
+            this.lstEsyalar.TabIndex = 16;
+            // 
+            // guna2HtmlLabel19
+            // 
+            this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel19.Location = new System.Drawing.Point(20, 350);
+            this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
+            this.guna2HtmlLabel19.Size = new System.Drawing.Size(102, 15);
+            this.guna2HtmlLabel19.TabIndex = 16;
+            this.guna2HtmlLabel19.Text = "Emlağın Bulunduğu İl";
             // 
             // guna2ComboBox7
             // 
@@ -383,10 +441,14 @@
             this.guna2ComboBox7.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2ComboBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBox7.ItemHeight = 30;
+            this.guna2ComboBox7.Items.AddRange(new object[] {
+            "Evet",
+            "Hayır"});
             this.guna2ComboBox7.Location = new System.Drawing.Point(492, 84);
             this.guna2ComboBox7.Name = "guna2ComboBox7";
             this.guna2ComboBox7.Size = new System.Drawing.Size(184, 36);
             this.guna2ComboBox7.TabIndex = 15;
+            this.guna2ComboBox7.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox7_SelectedIndexChanged);
             // 
             // guna2HtmlLabel14
             // 
@@ -396,6 +458,24 @@
             this.guna2HtmlLabel14.Size = new System.Drawing.Size(50, 15);
             this.guna2HtmlLabel14.TabIndex = 11;
             this.guna2HtmlLabel14.Text = "Eşyalı Mı?";
+            // 
+            // cmbEmlak_Durum
+            // 
+            this.cmbEmlak_Durum.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbEmlak_Durum.BackColor = System.Drawing.Color.Transparent;
+            this.cmbEmlak_Durum.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbEmlak_Durum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmlak_Durum.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbEmlak_Durum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbEmlak_Durum.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbEmlak_Durum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbEmlak_Durum.ItemHeight = 30;
+            this.cmbEmlak_Durum.Items.AddRange(new object[] {
+            "Seçiniz"});
+            this.cmbEmlak_Durum.Location = new System.Drawing.Point(20, 311);
+            this.cmbEmlak_Durum.Name = "cmbEmlak_Durum";
+            this.cmbEmlak_Durum.Size = new System.Drawing.Size(200, 36);
+            this.cmbEmlak_Durum.TabIndex = 4;
             // 
             // guna2ComboBox6
             // 
@@ -562,75 +642,43 @@
             this.guna2HtmlLabel8.TabIndex = 0;
             this.guna2HtmlLabel8.Text = "Emlak Özellikleri";
             // 
-            // guna2HtmlLabel19
+            // guna2HtmlLabel21
             // 
-            this.guna2HtmlLabel19.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel19.Location = new System.Drawing.Point(20, 350);
-            this.guna2HtmlLabel19.Name = "guna2HtmlLabel19";
-            this.guna2HtmlLabel19.Size = new System.Drawing.Size(102, 15);
-            this.guna2HtmlLabel19.TabIndex = 16;
-            this.guna2HtmlLabel19.Text = "Emlağın Bulunduğu İl";
+            this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel21.Location = new System.Drawing.Point(492, 254);
+            this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
+            this.guna2HtmlLabel21.Size = new System.Drawing.Size(84, 15);
+            this.guna2HtmlLabel21.TabIndex = 21;
+            this.guna2HtmlLabel21.Text = "Satın Alınan Fiyat";
             // 
-            // guna2HtmlLabel20
+            // guna2TextBox8
             // 
-            this.guna2HtmlLabel20.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel20.Location = new System.Drawing.Point(20, 514);
-            this.guna2HtmlLabel20.Name = "guna2HtmlLabel20";
-            this.guna2HtmlLabel20.Size = new System.Drawing.Size(69, 15);
-            this.guna2HtmlLabel20.TabIndex = 18;
-            this.guna2HtmlLabel20.Text = "Emlağın Semti";
+            this.guna2TextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox8.DefaultText = "";
+            this.guna2TextBox8.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox8.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox8.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox8.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox8.Location = new System.Drawing.Point(496, 281);
+            this.guna2TextBox8.Name = "guna2TextBox8";
+            this.guna2TextBox8.PasswordChar = '\0';
+            this.guna2TextBox8.PlaceholderText = "";
+            this.guna2TextBox8.SelectedText = "";
+            this.guna2TextBox8.Size = new System.Drawing.Size(200, 36);
+            this.guna2TextBox8.TabIndex = 22;
             // 
-            // cmbEmlak_Sehir
+            // guna2HtmlLabel22
             // 
-            this.cmbEmlak_Sehir.BackColor = System.Drawing.Color.Transparent;
-            this.cmbEmlak_Sehir.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbEmlak_Sehir.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEmlak_Sehir.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbEmlak_Sehir.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbEmlak_Sehir.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbEmlak_Sehir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbEmlak_Sehir.ItemHeight = 30;
-            this.cmbEmlak_Sehir.Location = new System.Drawing.Point(20, 372);
-            this.cmbEmlak_Sehir.Name = "cmbEmlak_Sehir";
-            this.cmbEmlak_Sehir.Size = new System.Drawing.Size(200, 36);
-            this.cmbEmlak_Sehir.TabIndex = 5;
-            this.cmbEmlak_Sehir.SelectionChangeCommitted += new System.EventHandler(this.guna2ComboBox10_SelectionChangeCommitted);
-            // 
-            // guna2ComboBox11
-            // 
-            this.guna2ComboBox11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox11.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox11.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox11.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox11.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox11.ItemHeight = 30;
-            this.guna2ComboBox11.Items.AddRange(new object[] {
-            "İlçe seçiniz"});
-            this.guna2ComboBox11.Location = new System.Drawing.Point(20, 535);
-            this.guna2ComboBox11.Name = "guna2ComboBox11";
-            this.guna2ComboBox11.Size = new System.Drawing.Size(200, 36);
-            this.guna2ComboBox11.StartIndex = 0;
-            this.guna2ComboBox11.TabIndex = 7;
-            // 
-            // cmbEmlak_Durum
-            // 
-            this.cmbEmlak_Durum.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbEmlak_Durum.BackColor = System.Drawing.Color.Transparent;
-            this.cmbEmlak_Durum.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbEmlak_Durum.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEmlak_Durum.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbEmlak_Durum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbEmlak_Durum.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbEmlak_Durum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbEmlak_Durum.ItemHeight = 30;
-            this.cmbEmlak_Durum.Items.AddRange(new object[] {
-            "Seçiniz"});
-            this.cmbEmlak_Durum.Location = new System.Drawing.Point(20, 311);
-            this.cmbEmlak_Durum.Name = "cmbEmlak_Durum";
-            this.cmbEmlak_Durum.Size = new System.Drawing.Size(200, 36);
-            this.cmbEmlak_Durum.TabIndex = 4;
+            this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel22.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.guna2HtmlLabel22.Location = new System.Drawing.Point(702, 290);
+            this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
+            this.guna2HtmlLabel22.Size = new System.Drawing.Size(14, 27);
+            this.guna2HtmlLabel22.TabIndex = 23;
+            this.guna2HtmlLabel22.Text = "₺";
             // 
             // UC_Mulkiyet_Ekle
             // 
@@ -666,7 +714,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox lstEsyalar;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox6;
@@ -687,5 +735,8 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
     }
 }
