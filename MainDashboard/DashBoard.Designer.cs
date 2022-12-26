@@ -39,9 +39,9 @@
             this.btn_Mulkiyetler = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Satis = new Guna.UI2.WinForms.Guna2Button();
             this.btn_AnaSayfa = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelDashboard = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(this.components);
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +75,7 @@
             this.lblKullanici.Size = new System.Drawing.Size(76, 21);
             this.lblKullanici.TabIndex = 9;
             this.lblKullanici.Text = "Kullanici Adi";
+            this.lblKullanici.Click += new System.EventHandler(this.lblKullanici_Click);
             // 
             // btn_Logout
             // 
@@ -271,16 +272,6 @@
             this.btn_AnaSayfa.UseTransparentBackground = true;
             this.btn_AnaSayfa.Click += new System.EventHandler(this.btn_AnaSayfa_Click);
             // 
-            // panelDashboard
-            // 
-            this.panelDashboard.AutoSize = true;
-            this.panelDashboard.BackColor = System.Drawing.SystemColors.Window;
-            this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDashboard.Location = new System.Drawing.Point(218, 0);
-            this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(1223, 801);
-            this.panelDashboard.TabIndex = 1;
-            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = global::MainDashboard.Properties.Resources.home_deal_1582832_1344054;
@@ -291,6 +282,16 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // panelDashboard
+            // 
+            this.panelDashboard.AutoSize = true;
+            this.panelDashboard.BackColor = System.Drawing.SystemColors.Window;
+            this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDashboard.Location = new System.Drawing.Point(218, 0);
+            this.panelDashboard.Name = "panelDashboard";
+            this.panelDashboard.Size = new System.Drawing.Size(1223, 801);
+            this.panelDashboard.TabIndex = 1;
             // 
             // DashBoard
             // 

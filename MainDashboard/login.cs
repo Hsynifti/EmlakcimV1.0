@@ -38,6 +38,7 @@ namespace MainDashboard
             {
                 DashBoard dashboard = new DashBoard();
                 dashboard.kullaniciadi= txt_username.Text;
+                dashboard.kullaniciId = dr[0].ToString();
                 dashboard.Show();
                 this.Hide();
             }

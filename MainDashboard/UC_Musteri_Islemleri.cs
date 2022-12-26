@@ -15,6 +15,7 @@ namespace MainDashboard
     public partial class UC_Musteri_Islemleri : UserControl
     {
         SQLAcces bgl = new SQLAcces();
+        Add_Customer Musteri = new Add_Customer();
         public UC_Musteri_Islemleri()
         {
             InitializeComponent();
@@ -22,23 +23,11 @@ namespace MainDashboard
 
         private void btn_CustomerAdd_Click(object sender, EventArgs e)
         {
-            if (txtCustomerName.Text != "" && txtCustomerSurname.Text != "")
-            {
-                SqlCommand komut = new SqlCommand("insert into T_Musteri (Musteriadi,Musterisoyadi,Iletisim,TCKimlik) values (@adi,@soyadi,@iletisim,@tckmlk)", bgl.baglanti());
-                komut.Parameters.AddWithValue("@adi", txtCustomerName.Text);
-                komut.Parameters.AddWithValue("@soyadi", txtCustomerSurname.Text);
-                komut.Parameters.AddWithValue("@iletisim", txtCustomerPhone.Text);
-                komut.Parameters.AddWithValue("@tckmlk", txtTRIdentyNo.Text);
-                komut.ExecuteNonQuery();
-                bgl.baglanti().Close();
-                MessageBox.Show("Müşteri Başarıyla Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtCustomerName.Text = txtCustomerSurname.Text = txtCustomerPhone.Text = "";
-                
-
-            }
-            else
-                MessageBox.Show("Lütfen Ad ve Soyad Bilgilerini Giriniz", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            
+            Musteri.Customer_Name = txtCustomerName.Text;
+            Musteri.Customer_Surname= txtCustomerSurname.Text;
+            Musteri.Customer_Phone = txtCustomerPhone.Text;
+            Musteri.Customer_IdentyNo = txtTRIdentyNo.Text;
+            Musteri.Musteri_Ekle();   
         }
     }
 }

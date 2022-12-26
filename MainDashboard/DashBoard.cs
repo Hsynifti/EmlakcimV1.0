@@ -25,6 +25,7 @@ namespace MainDashboard
         login giris = new login();
         //loginden kullanıcı ismi gelir
         public string kullaniciadi { get; set; }
+        public string kullaniciId { get; set; }
         private void addusercontrol(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -78,6 +79,7 @@ namespace MainDashboard
         {
             //kullanıcı ismi
             lblKullanici.Text = kullaniciadi;
+            lblUserId.Text = kullaniciId;
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -95,6 +97,11 @@ namespace MainDashboard
             }
             else
                 e.Cancel = true;
+        }
+
+        private void lblKullanici_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
