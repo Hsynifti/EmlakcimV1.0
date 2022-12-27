@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblKullanici = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_Logout = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Hesap = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Satislar = new Guna.UI2.WinForms.Guna2Button();
             this.btn_MulkiyetEkle = new Guna.UI2.WinForms.Guna2Button();
             this.btn_Mulkiyetler = new Guna.UI2.WinForms.Guna2Button();
-            this.btn_Satis = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_MusteriIslemleri = new Guna.UI2.WinForms.Guna2Button();
             this.btn_AnaSayfa = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelDashboard = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(this.components);
             this.guna2Panel1.SuspendLayout();
@@ -50,21 +50,32 @@
             // 
             this.guna2Panel1.AutoSize = true;
             this.guna2Panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.lblKullanici);
             this.guna2Panel1.Controls.Add(this.btn_Logout);
             this.guna2Panel1.Controls.Add(this.btn_Hesap);
             this.guna2Panel1.Controls.Add(this.btn_Satislar);
             this.guna2Panel1.Controls.Add(this.btn_MulkiyetEkle);
             this.guna2Panel1.Controls.Add(this.btn_Mulkiyetler);
-            this.guna2Panel1.Controls.Add(this.btn_Satis);
+            this.guna2Panel1.Controls.Add(this.btn_MusteriIslemleri);
             this.guna2Panel1.Controls.Add(this.btn_AnaSayfa);
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(218, 801);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::MainDashboard.Properties.Resources.home_deal_1582832_1344054;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(54, 12);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(130, 83);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // lblKullanici
             // 
@@ -216,33 +227,33 @@
             this.btn_Mulkiyetler.UseTransparentBackground = true;
             this.btn_Mulkiyetler.Click += new System.EventHandler(this.btn_Mulkiyetler_Click);
             // 
-            // btn_Satis
+            // btn_MusteriIslemleri
             // 
-            this.btn_Satis.Animated = true;
-            this.btn_Satis.AnimatedGIF = true;
-            this.btn_Satis.AutoRoundedCorners = true;
-            this.btn_Satis.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Satis.BorderRadius = 21;
-            this.btn_Satis.CustomImages.Image = global::MainDashboard.Properties.Resources.pngwing_com__4_;
-            this.btn_Satis.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_Satis.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Satis.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Satis.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Satis.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Satis.FillColor = System.Drawing.Color.Transparent;
-            this.btn_Satis.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_Satis.ForeColor = System.Drawing.Color.Black;
-            this.btn_Satis.HoverState.FillColor = System.Drawing.Color.OrangeRed;
-            this.btn_Satis.HoverState.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_Satis.Location = new System.Drawing.Point(32, 363);
-            this.btn_Satis.Name = "btn_Satis";
-            this.btn_Satis.Size = new System.Drawing.Size(180, 45);
-            this.btn_Satis.TabIndex = 2;
-            this.btn_Satis.Text = "Müşteri İşlemleri";
-            this.btn_Satis.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_Satis.TextOffset = new System.Drawing.Point(25, 0);
-            this.btn_Satis.UseTransparentBackground = true;
-            this.btn_Satis.Click += new System.EventHandler(this.btn_Satis_Click);
+            this.btn_MusteriIslemleri.Animated = true;
+            this.btn_MusteriIslemleri.AnimatedGIF = true;
+            this.btn_MusteriIslemleri.AutoRoundedCorners = true;
+            this.btn_MusteriIslemleri.BackColor = System.Drawing.Color.Transparent;
+            this.btn_MusteriIslemleri.BorderRadius = 21;
+            this.btn_MusteriIslemleri.CustomImages.Image = global::MainDashboard.Properties.Resources.pngwing_com__4_;
+            this.btn_MusteriIslemleri.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_MusteriIslemleri.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_MusteriIslemleri.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_MusteriIslemleri.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_MusteriIslemleri.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_MusteriIslemleri.FillColor = System.Drawing.Color.Transparent;
+            this.btn_MusteriIslemleri.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_MusteriIslemleri.ForeColor = System.Drawing.Color.Black;
+            this.btn_MusteriIslemleri.HoverState.FillColor = System.Drawing.Color.OrangeRed;
+            this.btn_MusteriIslemleri.HoverState.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_MusteriIslemleri.Location = new System.Drawing.Point(32, 363);
+            this.btn_MusteriIslemleri.Name = "btn_MusteriIslemleri";
+            this.btn_MusteriIslemleri.Size = new System.Drawing.Size(180, 45);
+            this.btn_MusteriIslemleri.TabIndex = 2;
+            this.btn_MusteriIslemleri.Text = "Müşteri İşlemleri";
+            this.btn_MusteriIslemleri.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_MusteriIslemleri.TextOffset = new System.Drawing.Point(25, 0);
+            this.btn_MusteriIslemleri.UseTransparentBackground = true;
+            this.btn_MusteriIslemleri.Click += new System.EventHandler(this.btn_MusteriIslemleri_Click);
             // 
             // btn_AnaSayfa
             // 
@@ -271,17 +282,6 @@
             this.btn_AnaSayfa.TextOffset = new System.Drawing.Point(25, 0);
             this.btn_AnaSayfa.UseTransparentBackground = true;
             this.btn_AnaSayfa.Click += new System.EventHandler(this.btn_AnaSayfa_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::MainDashboard.Properties.Resources.home_deal_1582832_1344054;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(53, 12);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(130, 83);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // panelDashboard
             // 
@@ -325,7 +325,7 @@
         private Guna.UI2.WinForms.Guna2Button btn_Satislar;
         private Guna.UI2.WinForms.Guna2Button btn_MulkiyetEkle;
         private Guna.UI2.WinForms.Guna2Button btn_Mulkiyetler;
-        private Guna.UI2.WinForms.Guna2Button btn_Satis;
+        private Guna.UI2.WinForms.Guna2Button btn_MusteriIslemleri;
         private Guna.UI2.WinForms.Guna2Button btn_Hesap;
         private Guna.UI2.WinForms.Guna2Button btn_Logout;
         private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;

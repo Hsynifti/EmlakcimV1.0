@@ -37,7 +37,6 @@
             this.btnSat = new Guna.UI2.WinForms.Guna2Button();
             this.grpVarolan = new Guna.UI2.WinForms.Guna2GroupBox();
             this.dtgMusteriler = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.musteriid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMusteriadi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMusteriSoyadi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMusteriIletisim = new Guna.UI2.WinForms.Guna2TextBox();
@@ -48,6 +47,8 @@
             this.TCKmlktxt = new Guna.UI2.WinForms.Guna2TextBox();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firmaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpVarolan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMusteriler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -63,7 +64,7 @@
             this.btnSat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSat.ForeColor = System.Drawing.Color.White;
-            this.btnSat.Location = new System.Drawing.Point(956, 571);
+            this.btnSat.Location = new System.Drawing.Point(1137, 633);
             this.btnSat.Margin = new System.Windows.Forms.Padding(2);
             this.btnSat.Name = "btnSat";
             this.btnSat.Size = new System.Drawing.Size(135, 37);
@@ -82,7 +83,7 @@
             this.grpVarolan.Location = new System.Drawing.Point(43, 70);
             this.grpVarolan.Margin = new System.Windows.Forms.Padding(2);
             this.grpVarolan.Name = "grpVarolan";
-            this.grpVarolan.Size = new System.Drawing.Size(1039, 409);
+            this.grpVarolan.Size = new System.Drawing.Size(1229, 409);
             this.grpVarolan.TabIndex = 9;
             this.grpVarolan.Text = "Müşteri Seçiniz";
             // 
@@ -103,7 +104,8 @@
             this.dtgMusteriler.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgMusteriler.ColumnHeadersHeight = 30;
             this.dtgMusteriler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.musteriid});
+            this.Column1,
+            this.firmaid});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -121,7 +123,7 @@
             this.dtgMusteriler.RowHeadersWidth = 51;
             this.dtgMusteriler.RowTemplate.Height = 24;
             this.dtgMusteriler.RowTemplate.ReadOnly = true;
-            this.dtgMusteriler.Size = new System.Drawing.Size(1035, 354);
+            this.dtgMusteriler.Size = new System.Drawing.Size(1225, 354);
             this.dtgMusteriler.TabIndex = 7;
             this.dtgMusteriler.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgMusteriler.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -147,15 +149,6 @@
             this.dtgMusteriler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMusteriler_CellClick);
             this.dtgMusteriler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMusteriler_CellContentClick);
             // 
-            // musteriid
-            // 
-            this.musteriid.DataPropertyName = "Musteri_id";
-            this.musteriid.HeaderText = "Column1";
-            this.musteriid.MinimumWidth = 6;
-            this.musteriid.Name = "musteriid";
-            this.musteriid.ReadOnly = true;
-            this.musteriid.Visible = false;
-            // 
             // txtMusteriadi
             // 
             this.txtMusteriadi.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -168,7 +161,7 @@
             this.txtMusteriadi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMusteriadi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMusteriadi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMusteriadi.Location = new System.Drawing.Point(108, 531);
+            this.txtMusteriadi.Location = new System.Drawing.Point(88, 534);
             this.txtMusteriadi.Margin = new System.Windows.Forms.Padding(2);
             this.txtMusteriadi.Name = "txtMusteriadi";
             this.txtMusteriadi.PasswordChar = '\0';
@@ -189,7 +182,7 @@
             this.txtMusteriSoyadi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMusteriSoyadi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMusteriSoyadi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMusteriSoyadi.Location = new System.Drawing.Point(361, 530);
+            this.txtMusteriSoyadi.Location = new System.Drawing.Point(341, 533);
             this.txtMusteriSoyadi.Margin = new System.Windows.Forms.Padding(2);
             this.txtMusteriSoyadi.Name = "txtMusteriSoyadi";
             this.txtMusteriSoyadi.PasswordChar = '\0';
@@ -210,7 +203,7 @@
             this.txtMusteriIletisim.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMusteriIletisim.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMusteriIletisim.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMusteriIletisim.Location = new System.Drawing.Point(589, 530);
+            this.txtMusteriIletisim.Location = new System.Drawing.Point(569, 533);
             this.txtMusteriIletisim.Margin = new System.Windows.Forms.Padding(2);
             this.txtMusteriIletisim.Name = "txtMusteriIletisim";
             this.txtMusteriIletisim.PasswordChar = '\0';
@@ -224,7 +217,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(67, 543);
+            this.label1.Location = new System.Drawing.Point(47, 546);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 15);
@@ -236,7 +229,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(312, 543);
+            this.label2.Location = new System.Drawing.Point(292, 546);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 15);
@@ -248,7 +241,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(536, 543);
+            this.label3.Location = new System.Drawing.Point(516, 546);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 15);
@@ -260,7 +253,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(758, 543);
+            this.label4.Location = new System.Drawing.Point(738, 546);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 15);
@@ -279,7 +272,7 @@
             this.TCKmlktxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TCKmlktxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TCKmlktxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TCKmlktxt.Location = new System.Drawing.Point(821, 531);
+            this.TCKmlktxt.Location = new System.Drawing.Point(801, 534);
             this.TCKmlktxt.Margin = new System.Windows.Forms.Padding(2);
             this.TCKmlktxt.Name = "TCKmlktxt";
             this.TCKmlktxt.PasswordChar = '\0';
@@ -331,7 +324,7 @@
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1126, 47);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1307, 47);
             this.guna2DataGridView1.TabIndex = 11;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -355,12 +348,28 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Musteri_id";
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // firmaid
+            // 
+            this.firmaid.DataPropertyName = "Firma_id";
+            this.firmaid.HeaderText = "Column2";
+            this.firmaid.Name = "firmaid";
+            this.firmaid.ReadOnly = true;
+            this.firmaid.Visible = false;
+            // 
             // satis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(1126, 619);
+            this.ClientSize = new System.Drawing.Size(1307, 681);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TCKmlktxt);
             this.Controls.Add(this.label3);
@@ -391,7 +400,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSat;
         private Guna.UI2.WinForms.Guna2GroupBox grpVarolan;
         private Guna.UI2.WinForms.Guna2DataGridView dtgMusteriler;
-        private System.Windows.Forms.DataGridViewTextBoxColumn musteriid;
         private Guna.UI2.WinForms.Guna2TextBox txtMusteriadi;
         private Guna.UI2.WinForms.Guna2TextBox txtMusteriSoyadi;
         private Guna.UI2.WinForms.Guna2TextBox txtMusteriIletisim;
@@ -402,5 +410,7 @@
         private Guna.UI2.WinForms.Guna2TextBox TCKmlktxt;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         public Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firmaid;
     }
 }

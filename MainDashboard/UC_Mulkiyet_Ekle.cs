@@ -18,9 +18,11 @@ namespace MainDashboard
     {
         SQLAcces bgl = new SQLAcces();
         General genel = new General();
+        public int firmaId { get; set; }
 
-        public UC_Mulkiyet_Ekle()
+        public UC_Mulkiyet_Ekle(int firma_id)
         {
+            firmaId= firma_id;
             InitializeComponent();
         }
         private void UC_Mulkiyet_Ekle_Load(object sender, EventArgs e)
@@ -33,11 +35,12 @@ namespace MainDashboard
             genel.cmbdoldur("Durum", "Durum_id", "Durum_Getir", cmbEmlak_Durum);
             //ısıtma combobox
             genel.cmbdoldur("Isitmaadi", "Isitma_id", "Isitma_Getir", guna2ComboBox6);
+            genel.cboxdoldur("Esya", "Esya_id", "Esya_Getir", lstEsyalar);
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            SqlCommand komutekle = new SqlCommand("insert into T_Emlak(Emlakadi,Durum_id,Tur_id,Semt_id,Metrekare,Cephe,Kat,Yapiyasi,Odasayisi,Fiyat,Adres,Isitma_id) values (@ad,@durum,@tur,@semt,@mkare,@cephe,@kat,@yas,@odasayisi,@fiyat,@adres,@isitma)", bgl.baglanti());
+            SqlCommand komutekle = new SqlCommand("insert into T_Emlak(Emlakadi,Durum_id,Tur_id,Semt_id,Metrekare,Cephe,Kat,Yapiyasi,Odasayisi,Fiyat,Adres,Isitma_id,Firma_id) values (@ad,@durum,@tur,@semt,@mkare,@cephe,@kat,@yas,@odasayisi,@fiyat,@adres,@isitma,@firmaId)", bgl.baglanti());
             komutekle.Parameters.AddWithValue("@ad", guna2TextBox1.Text);
             komutekle.Parameters.AddWithValue("@durum", cmbEmlak_Durum.SelectedValue);
             komutekle.Parameters.AddWithValue("@tur", cmbEmlak_Turu.SelectedValue);
@@ -50,9 +53,10 @@ namespace MainDashboard
             komutekle.Parameters.AddWithValue("@fiyat", guna2TextBox4.Text);
             komutekle.Parameters.AddWithValue("@adres", guna2TextBox2.Text);
             komutekle.Parameters.AddWithValue("@isitma", guna2ComboBox6.SelectedValue);
+            komutekle.Parameters.AddWithValue("@firmaId", firmaId);
             komutekle.ExecuteNonQuery();
             bgl.baglanti().Close();
-            MessageBox.Show("Emlak Kaydedildi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show("Emlak Kaydedildi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -101,8 +105,11 @@ namespace MainDashboard
                 lstEsyalar.Enabled = false;
             }
         }
-        
 
+        private void lstEsyalar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

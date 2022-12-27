@@ -36,5 +36,28 @@ namespace Transactions
             cmb.ValueMember = _ValueMember;
             
         }
+        public void cboxdoldur(string _DisplayMember, string _ValueMember, string _StoredProcedure, CheckedListBox clbox)
+        {
+            DataTable dtb = new DataTable();
+            using (SqlConnection conn = ac.baglanti())
+            {
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = _StoredProcedure;
+                    //aşağıdaki satır parametreli procedurlerde hata verir
+                    //cmd.CommandType = CommandType.StoredProcedure;
+                    using (SqlDataAdapter adap = new SqlDataAdapter(cmd))
+                    {
+                        adap.Fill(dtb);
+                    }
+                }
+                conn.Close();
+
+            }
+            clbox.DataSource = dtb;
+            clbox.DisplayMember = _DisplayMember;
+            clbox.ValueMember = _ValueMember;
+
+        }
     }
 }

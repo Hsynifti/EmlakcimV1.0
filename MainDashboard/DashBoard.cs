@@ -24,8 +24,8 @@ namespace MainDashboard
         }
         login giris = new login();
         //loginden kullanıcı ismi gelir
-        public string kullaniciadi { get; set; }
-        public string kullaniciId { get; set; }
+        public string Firma_Adi { get; set; }
+        public int firmaId { get; set; }
         private void addusercontrol(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -42,25 +42,25 @@ namespace MainDashboard
 
         private void btn_MulkiyetEkle_Click(object sender, EventArgs e)
         {
-            UC_Mulkiyet_Ekle uC_Mulkiyet_Ekle = new UC_Mulkiyet_Ekle();
+            UC_Mulkiyet_Ekle uC_Mulkiyet_Ekle = new UC_Mulkiyet_Ekle(firmaId);
             addusercontrol(uC_Mulkiyet_Ekle);
         }
 
         private void btn_Mulkiyetler_Click(object sender, EventArgs e)
         {
-            UC_Mulkiyetler uC_Mulkiyetler = new UC_Mulkiyetler();
+            UC_Mulkiyetler uC_Mulkiyetler = new UC_Mulkiyetler(firmaId);
             addusercontrol(uC_Mulkiyetler);
         }
 
-        private void btn_Satis_Click(object sender, EventArgs e)
+        private void btn_MusteriIslemleri_Click(object sender, EventArgs e)
         {
-            UC_Musteri_Islemleri uC_MusteriEkle = new UC_Musteri_Islemleri();
+            UC_Musteri_Islemleri uC_MusteriEkle = new UC_Musteri_Islemleri(firmaId);
             addusercontrol(uC_MusteriEkle);
         }
 
         private void btn_Satislar_Click(object sender, EventArgs e)
         {
-            UC_Satislar uC_Satislar = new UC_Satislar();
+            UC_Satislar uC_Satislar = new UC_Satislar(firmaId);
             addusercontrol(uC_Satislar);
         }
 
@@ -78,8 +78,7 @@ namespace MainDashboard
         private void DashBoard_Load(object sender, EventArgs e)
         {
             //kullanıcı ismi
-            lblKullanici.Text = kullaniciadi;
-            lblUserId.Text = kullaniciId;
+            lblKullanici.Text = Firma_Adi;
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)

@@ -41,6 +41,9 @@
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2TextBox8 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ComboBox11 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -67,9 +70,6 @@
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox8 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -281,6 +281,44 @@
             this.guna2Panel1.TabIndex = 15;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
+            // guna2HtmlLabel22
+            // 
+            this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel22.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.guna2HtmlLabel22.Location = new System.Drawing.Point(702, 290);
+            this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
+            this.guna2HtmlLabel22.Size = new System.Drawing.Size(14, 27);
+            this.guna2HtmlLabel22.TabIndex = 23;
+            this.guna2HtmlLabel22.Text = "₺";
+            // 
+            // guna2TextBox8
+            // 
+            this.guna2TextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox8.DefaultText = "";
+            this.guna2TextBox8.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox8.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox8.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox8.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox8.Location = new System.Drawing.Point(496, 281);
+            this.guna2TextBox8.Name = "guna2TextBox8";
+            this.guna2TextBox8.PasswordChar = '\0';
+            this.guna2TextBox8.PlaceholderText = "";
+            this.guna2TextBox8.SelectedText = "";
+            this.guna2TextBox8.Size = new System.Drawing.Size(200, 36);
+            this.guna2TextBox8.TabIndex = 22;
+            // 
+            // guna2HtmlLabel21
+            // 
+            this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel21.Location = new System.Drawing.Point(492, 254);
+            this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
+            this.guna2HtmlLabel21.Size = new System.Drawing.Size(84, 15);
+            this.guna2HtmlLabel21.TabIndex = 21;
+            this.guna2HtmlLabel21.Text = "Satın Alınan Fiyat";
+            // 
             // guna2Button1
             // 
             this.guna2Button1.Animated = true;
@@ -406,21 +444,12 @@
             this.lstEsyalar.BackColor = System.Drawing.SystemColors.Control;
             this.lstEsyalar.CheckOnClick = true;
             this.lstEsyalar.FormattingEnabled = true;
-            this.lstEsyalar.Items.AddRange(new object[] {
-            "Buzdolabı",
-            "Televizyon",
-            "Oturma Grubu",
-            "Yatak Odası Grubu",
-            "Halı",
-            "Çamaşır Makinesi",
-            "Bulaşık Makinesi",
-            "Ocak",
-            "Davlumbaz"});
             this.lstEsyalar.Location = new System.Drawing.Point(492, 157);
             this.lstEsyalar.MultiColumn = true;
             this.lstEsyalar.Name = "lstEsyalar";
             this.lstEsyalar.Size = new System.Drawing.Size(286, 79);
             this.lstEsyalar.TabIndex = 16;
+            this.lstEsyalar.SelectedIndexChanged += new System.EventHandler(this.lstEsyalar_SelectedIndexChanged);
             // 
             // guna2HtmlLabel19
             // 
@@ -641,44 +670,6 @@
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(162, 30);
             this.guna2HtmlLabel8.TabIndex = 0;
             this.guna2HtmlLabel8.Text = "Emlak Özellikleri";
-            // 
-            // guna2HtmlLabel21
-            // 
-            this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(492, 254);
-            this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
-            this.guna2HtmlLabel21.Size = new System.Drawing.Size(84, 15);
-            this.guna2HtmlLabel21.TabIndex = 21;
-            this.guna2HtmlLabel21.Text = "Satın Alınan Fiyat";
-            // 
-            // guna2TextBox8
-            // 
-            this.guna2TextBox8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox8.DefaultText = "";
-            this.guna2TextBox8.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox8.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox8.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox8.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox8.Location = new System.Drawing.Point(496, 281);
-            this.guna2TextBox8.Name = "guna2TextBox8";
-            this.guna2TextBox8.PasswordChar = '\0';
-            this.guna2TextBox8.PlaceholderText = "";
-            this.guna2TextBox8.SelectedText = "";
-            this.guna2TextBox8.Size = new System.Drawing.Size(200, 36);
-            this.guna2TextBox8.TabIndex = 22;
-            // 
-            // guna2HtmlLabel22
-            // 
-            this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel22.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(702, 290);
-            this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
-            this.guna2HtmlLabel22.Size = new System.Drawing.Size(14, 27);
-            this.guna2HtmlLabel22.TabIndex = 23;
-            this.guna2HtmlLabel22.Text = "₺";
             // 
             // UC_Mulkiyet_Ekle
             // 

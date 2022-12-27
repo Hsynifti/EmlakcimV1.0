@@ -15,11 +15,14 @@ namespace MainDashboard
     public partial class UC_Mulkiyetler : UserControl
     {
         SQLAcces bgl = new SQLAcces();
-        General genel = new General();  
-        satis frmSatis=new satis();
+        General genel = new General();
+        public int firmaId { get; set; }
+        satis frmSatis;
         incele frmIncele = new incele();
-        public UC_Mulkiyetler()
+        public UC_Mulkiyetler(int firma_id)
         {
+            firmaId = firma_id;
+            frmSatis = new satis(firmaId);
             InitializeComponent();
         }
         //SqlConnection conn = new SqlConnection("Data Source=MAZLUM;Initial Catalog=Emlak;Integrated Security=True");
@@ -44,7 +47,8 @@ namespace MainDashboard
         public void emlaklar()
         {
             //emlaklar datagrid
-            SqlCommand komut4 = new SqlCommand("execute emlaklar", bgl.baglanti());
+            SqlCommand komut4 = new SqlCommand("execute emlaklar @FirmaId = @firmaId", bgl.baglanti());
+            komut4.Parameters.AddWithValue("@firmaId", firmaId);
             SqlDataAdapter da4 = new SqlDataAdapter(komut4);
             DataTable dt4 = new DataTable();
             da4.Fill(dt4);

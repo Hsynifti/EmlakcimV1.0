@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Transactions
 {
     
-    public class Users
+    public class User
     {
         
         public int User_ID { get; set; }

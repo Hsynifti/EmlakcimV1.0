@@ -15,10 +15,12 @@ namespace MainDashboard
     public partial class UC_Musteri_Islemleri : UserControl
     {
         SQLAcces bgl = new SQLAcces();
+        public int firmaId { get; set; } 
         Add_Customer Musteri = new Add_Customer();
-        public UC_Musteri_Islemleri()
+        public UC_Musteri_Islemleri(int firma_id)
         {
             InitializeComponent();
+            firmaId = firma_id; 
         }
 
         private void btn_CustomerAdd_Click(object sender, EventArgs e)
@@ -27,6 +29,7 @@ namespace MainDashboard
             Musteri.Customer_Surname= txtCustomerSurname.Text;
             Musteri.Customer_Phone = txtCustomerPhone.Text;
             Musteri.Customer_IdentyNo = txtTRIdentyNo.Text;
+            Musteri.Firma_Id = firmaId;
             Musteri.Musteri_Ekle();   
         }
     }

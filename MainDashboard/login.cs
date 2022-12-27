@@ -37,8 +37,8 @@ namespace MainDashboard
             if (dr.Read())
             {
                 DashBoard dashboard = new DashBoard();
-                dashboard.kullaniciadi= txt_username.Text;
-                dashboard.kullaniciId = dr[0].ToString();
+                dashboard.firmaId = (int)dr[0];
+                dashboard.Firma_Adi = (string)dr[7];
                 dashboard.Show();
                 this.Hide();
             }
@@ -54,6 +54,14 @@ namespace MainDashboard
             if (txt_username.Text == "" || txt_pass.Text == "")
             {
                 MessageBox.Show("Lütfen boş bırakmayınız.");
+            }
+            if (txt_username.Text!= "")
+            {
+                MessageBox.Show("Şifre alanı boş geçilemez.");
+            }
+            if (txt_pass.Text!="")
+            {
+                MessageBox.Show("Kullanıcı adını boş bırakmayınız!");
             }
             else
             {

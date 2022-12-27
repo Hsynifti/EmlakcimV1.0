@@ -99,7 +99,7 @@
             this.guna2DataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
@@ -135,9 +135,9 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.DarkGreen;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(12, 48);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(108, 32);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(147, 32);
             this.guna2HtmlLabel1.TabIndex = 21;
-            this.guna2HtmlLabel1.Text = "Emlak Ekle";
+            this.guna2HtmlLabel1.Text = "Emlak Düzenle";
             // 
             // btn_Edit
             // 
@@ -703,7 +703,7 @@
             this.Controls.Add(this.guna2HtmlLabel9);
             this.Controls.Add(this.guna2HtmlLabel8);
             this.Controls.Add(this.guna2DataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "incele";
             this.Text = "incele";
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();

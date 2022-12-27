@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,11 +15,14 @@ namespace MainDashboard
 {
     public partial class satis : Form
     {
-        public satis()
+        public int firmaId { get; set; }
+        public satis(int firma_id)
         {
+            firmaId = firma_id;
             InitializeComponent();
         }
         SQLAcces bgl=new SQLAcces();
+        
         //Musteri_id 
         int MusteriID=-1;
         private void rdYeni_CheckedChanged(object sender, EventArgs e)
@@ -31,7 +35,8 @@ namespace MainDashboard
         }
         void musterilistele()
         {
-            SqlCommand komut = new SqlCommand("execute musterilistele", bgl.baglanti());
+            SqlCommand komut = new SqlCommand("execute musterilistele @FirmaId = @firmaId", bgl.baglanti());
+            komut.Parameters.AddWithValue("@firmaId", firmaId);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -65,9 +70,10 @@ namespace MainDashboard
                 }
                 else
                 {
-                    SqlCommand komut1 = new SqlCommand("insert into T_Satis (Emlak_id,Musteri_id) values (@emlakid,@musteriid)", bgl.baglanti());
+                    SqlCommand komut1 = new SqlCommand("insert into T_Satis (Emlak_id,Musteri_id,Firma_id) values (@emlakid,@musteriid,@firma_id)", bgl.baglanti());
                     komut1.Parameters.AddWithValue("@emlakid", tabloemlakid);
                     komut1.Parameters.AddWithValue("@musteriid", MusteriID);
+                    komut1.Parameters.AddWithValue("@firma_id", firmaId);
                     komut1.ExecuteNonQuery();
                     bgl.baglanti().Close();
 
@@ -84,11 +90,11 @@ namespace MainDashboard
         private void dtgMusteriler_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int secilen = dtgMusteriler.SelectedCells[0].RowIndex;
-            MusteriID = Convert.ToInt32(dtgMusteriler.Rows[secilen].Cells[0].Value);
-            txtMusteriadi.Text = dtgMusteriler.Rows[secilen].Cells[1].Value.ToString();
-            txtMusteriSoyadi.Text = dtgMusteriler.Rows[secilen].Cells[2].Value.ToString();
-            txtMusteriIletisim.Text = dtgMusteriler.Rows[secilen].Cells[3].Value.ToString();
-            TCKmlktxt.Text = dtgMusteriler.Rows[secilen].Cells[4].Value.ToString();
+            MusteriID = Convert.ToInt32(dtgMusteriler.Rows[secilen].Cells[1].Value);
+            txtMusteriadi.Text = dtgMusteriler.Rows[secilen].Cells[2].Value.ToString();
+            txtMusteriSoyadi.Text = dtgMusteriler.Rows[secilen].Cells[3].Value.ToString();
+            txtMusteriIletisim.Text = dtgMusteriler.Rows[secilen].Cells[4].Value.ToString();
+            TCKmlktxt.Text = dtgMusteriler.Rows[secilen].Cells[5].Value.ToString();
         }
 
         private void txtIletisim_TextChanged(object sender, EventArgs e)
