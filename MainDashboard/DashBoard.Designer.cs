@@ -68,7 +68,7 @@
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Image = global::MainDashboard.Properties.Resources.home_deal_1582832_1344054;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(54, 12);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
@@ -94,7 +94,6 @@
             this.btn_Logout.AnimatedGIF = true;
             this.btn_Logout.BackColor = System.Drawing.Color.Transparent;
             this.btn_Logout.BorderRadius = 10;
-            this.btn_Logout.CustomImages.Image = global::MainDashboard.Properties.Resources.pngwing_com__6_;
             this.btn_Logout.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Logout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Logout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -105,6 +104,8 @@
             this.btn_Logout.ForeColor = System.Drawing.Color.Black;
             this.btn_Logout.HoverState.FillColor = System.Drawing.Color.OrangeRed;
             this.btn_Logout.HoverState.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_Logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_Logout.Image")));
+            this.btn_Logout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Logout.Location = new System.Drawing.Point(35, 726);
             this.btn_Logout.Name = "btn_Logout";
             this.btn_Logout.Size = new System.Drawing.Size(180, 45);
@@ -122,7 +123,6 @@
             this.btn_Hesap.AutoRoundedCorners = true;
             this.btn_Hesap.BackColor = System.Drawing.Color.Transparent;
             this.btn_Hesap.BorderRadius = 21;
-            this.btn_Hesap.CustomImages.Image = global::MainDashboard.Properties.Resources.pngwing_com__5_;
             this.btn_Hesap.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Hesap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Hesap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -133,6 +133,8 @@
             this.btn_Hesap.ForeColor = System.Drawing.Color.Black;
             this.btn_Hesap.HoverState.FillColor = System.Drawing.Color.OrangeRed;
             this.btn_Hesap.HoverState.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_Hesap.Image = ((System.Drawing.Image)(resources.GetObject("btn_Hesap.Image")));
+            this.btn_Hesap.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Hesap.IndicateFocus = true;
             this.btn_Hesap.Location = new System.Drawing.Point(32, 414);
             this.btn_Hesap.Name = "btn_Hesap";
@@ -150,7 +152,6 @@
             this.btn_Satislar.AutoRoundedCorners = true;
             this.btn_Satislar.BackColor = System.Drawing.Color.Transparent;
             this.btn_Satislar.BorderRadius = 21;
-            this.btn_Satislar.CustomImages.Image = global::MainDashboard.Properties.Resources.pngwing_com__3_;
             this.btn_Satislar.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Satislar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Satislar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -161,6 +162,8 @@
             this.btn_Satislar.ForeColor = System.Drawing.Color.Black;
             this.btn_Satislar.HoverState.FillColor = System.Drawing.Color.OrangeRed;
             this.btn_Satislar.HoverState.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_Satislar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Satislar.Image")));
+            this.btn_Satislar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Satislar.Location = new System.Drawing.Point(32, 312);
             this.btn_Satislar.Name = "btn_Satislar";
             this.btn_Satislar.Size = new System.Drawing.Size(180, 45);
@@ -178,7 +181,6 @@
             this.btn_MulkiyetEkle.AutoRoundedCorners = true;
             this.btn_MulkiyetEkle.BackColor = System.Drawing.Color.Transparent;
             this.btn_MulkiyetEkle.BorderRadius = 21;
-            this.btn_MulkiyetEkle.CustomImages.Image = global::MainDashboard.Properties.Resources.pngwing_com__1_;
             this.btn_MulkiyetEkle.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_MulkiyetEkle.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_MulkiyetEkle.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -189,6 +191,8 @@
             this.btn_MulkiyetEkle.ForeColor = System.Drawing.Color.Black;
             this.btn_MulkiyetEkle.HoverState.FillColor = System.Drawing.Color.OrangeRed;
             this.btn_MulkiyetEkle.HoverState.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_MulkiyetEkle.Image = ((System.Drawing.Image)(resources.GetObject("btn_MulkiyetEkle.Image")));
+            this.btn_MulkiyetEkle.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_MulkiyetEkle.Location = new System.Drawing.Point(35, 210);
             this.btn_MulkiyetEkle.Name = "btn_MulkiyetEkle";
             this.btn_MulkiyetEkle.Size = new System.Drawing.Size(180, 45);
@@ -206,7 +210,6 @@
             this.btn_Mulkiyetler.AutoRoundedCorners = true;
             this.btn_Mulkiyetler.BackColor = System.Drawing.Color.Transparent;
             this.btn_Mulkiyetler.BorderRadius = 21;
-            this.btn_Mulkiyetler.CustomImages.Image = global::MainDashboard.Properties.Resources.pngwing_com__2_;
             this.btn_Mulkiyetler.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Mulkiyetler.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_Mulkiyetler.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -217,6 +220,8 @@
             this.btn_Mulkiyetler.ForeColor = System.Drawing.Color.Black;
             this.btn_Mulkiyetler.HoverState.FillColor = System.Drawing.Color.OrangeRed;
             this.btn_Mulkiyetler.HoverState.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_Mulkiyetler.Image = ((System.Drawing.Image)(resources.GetObject("btn_Mulkiyetler.Image")));
+            this.btn_Mulkiyetler.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_Mulkiyetler.Location = new System.Drawing.Point(35, 261);
             this.btn_Mulkiyetler.Name = "btn_Mulkiyetler";
             this.btn_Mulkiyetler.Size = new System.Drawing.Size(180, 45);
@@ -234,7 +239,6 @@
             this.btn_MusteriIslemleri.AutoRoundedCorners = true;
             this.btn_MusteriIslemleri.BackColor = System.Drawing.Color.Transparent;
             this.btn_MusteriIslemleri.BorderRadius = 21;
-            this.btn_MusteriIslemleri.CustomImages.Image = global::MainDashboard.Properties.Resources.pngwing_com__4_;
             this.btn_MusteriIslemleri.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_MusteriIslemleri.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_MusteriIslemleri.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -245,6 +249,8 @@
             this.btn_MusteriIslemleri.ForeColor = System.Drawing.Color.Black;
             this.btn_MusteriIslemleri.HoverState.FillColor = System.Drawing.Color.OrangeRed;
             this.btn_MusteriIslemleri.HoverState.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_MusteriIslemleri.Image = ((System.Drawing.Image)(resources.GetObject("btn_MusteriIslemleri.Image")));
+            this.btn_MusteriIslemleri.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_MusteriIslemleri.Location = new System.Drawing.Point(32, 363);
             this.btn_MusteriIslemleri.Name = "btn_MusteriIslemleri";
             this.btn_MusteriIslemleri.Size = new System.Drawing.Size(180, 45);
@@ -262,7 +268,6 @@
             this.btn_AnaSayfa.AutoRoundedCorners = true;
             this.btn_AnaSayfa.BackColor = System.Drawing.Color.Transparent;
             this.btn_AnaSayfa.BorderRadius = 21;
-            this.btn_AnaSayfa.CustomImages.Image = global::MainDashboard.Properties.Resources.pngwing_com;
             this.btn_AnaSayfa.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_AnaSayfa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_AnaSayfa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -273,6 +278,8 @@
             this.btn_AnaSayfa.ForeColor = System.Drawing.Color.Black;
             this.btn_AnaSayfa.HoverState.FillColor = System.Drawing.Color.OrangeRed;
             this.btn_AnaSayfa.HoverState.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_AnaSayfa.Image = ((System.Drawing.Image)(resources.GetObject("btn_AnaSayfa.Image")));
+            this.btn_AnaSayfa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_AnaSayfa.Location = new System.Drawing.Point(35, 159);
             this.btn_AnaSayfa.Name = "btn_AnaSayfa";
             this.btn_AnaSayfa.Size = new System.Drawing.Size(180, 45);
@@ -285,7 +292,7 @@
             // 
             // panelDashboard
             // 
-            this.panelDashboard.AutoSize = true;
+            this.panelDashboard.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelDashboard.BackColor = System.Drawing.SystemColors.Window;
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDashboard.Location = new System.Drawing.Point(218, 0);

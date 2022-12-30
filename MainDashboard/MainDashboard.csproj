@@ -48,11 +48,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.Charts.WinForms, Version=1.0.4.0, Culture=neutral, PublicKeyToken=70866663edbc6595, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.Charts.WinForms.1.0.4\lib\net40\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.9, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.9\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,11 +70,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="incele.cs">
+    <Compile Include="frmİncele.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="incele.Designer.cs">
-      <DependentUpon>incele.cs</DependentUpon>
+    <Compile Include="frmİncele.Designer.cs">
+      <DependentUpon>frmİncele.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -76,11 +82,11 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="satis.cs">
+    <Compile Include="frmSatis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="satis.Designer.cs">
-      <DependentUpon>satis.cs</DependentUpon>
+    <Compile Include="frmSatis.Designer.cs">
+      <DependentUpon>frmSatis.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_AnaSayfa.cs">
       <SubType>UserControl</SubType>
@@ -126,14 +132,14 @@
     <Compile Include="UC_Satislar.Designer.cs">
       <DependentUpon>UC_Satislar.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="incele.resx">
-      <DependentUpon>incele.cs</DependentUpon>
+    <EmbeddedResource Include="frmİncele.resx">
+      <DependentUpon>frmİncele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="satis.resx">
-      <DependentUpon>satis.cs</DependentUpon>
+    <EmbeddedResource Include="frmSatis.resx">
+      <DependentUpon>frmSatis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_AnaSayfa.resx">
       <DependentUpon>UC_AnaSayfa.cs</DependentUpon>
@@ -181,9 +187,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\home-deal-1582832-1344054.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
@@ -202,34 +205,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\login_bg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pass.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\c6290cbd497e76e536931568aefd8b60.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngwing.com %286%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngwing.com %285%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngwing.com %284%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngwing.com %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngwing.com %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngwing.com %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pngwing.com.png" />
+    <None Include="Resources\images\pngwing.com-min.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

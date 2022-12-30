@@ -20,6 +20,8 @@ namespace MainDashboard
             InitializeComponent();
         }
         SQLAcces bgl = new SQLAcces();
+        General genel = new General(); 
+        User Login=new User();
         private void guna2Button2_Click(object sender, EventArgs e)
         {
         }
@@ -27,18 +29,52 @@ namespace MainDashboard
         {
             Application.Exit();
         }
+        private void Giris()
+        {
+            Login.User_Name = txt_username.Text;
+            Login.Password = txt_pass.Text;
+            DashBoard dashboard = new DashBoard();
+            //FirmaId-kullaniciid alınır.
+            dashboard.firmaId = Convert.ToInt32(genel.Veri("Kullanici @username='" + Login.User_Name+ "',@pass='" + Login.Password + "'", "Kullanici_id"));
+            //FirmaAdi alınır.
+            dashboard.Firma_Adi = Convert.ToString(genel.Veri("Kullanici @username='" +Login.User_Name+ "',@pass='" +Login.Password+ "'", "Firma_Adi"));
+            //kullanici adi ve sifre
+            string K_Adi = Convert.ToString(genel.Veri("Kullanici @username='" +Login.User_Name+ "',@pass='" +Login.Password+ "'", "user_name"));
+            string Sifre = Convert.ToString(genel.Veri("Kullanici @username='" +Login.User_Name+ "',@pass='" +Login.Password+ "'", "pass"));
 
+
+            if(K_Adi==Login.User_Name && Sifre==Login.Password)
+            {            
+                dashboard.Show();
+                lblHata.Visible = false;
+                this.Hide();
+            }
+            else
+            {
+                lblHata.Text = "Kullanıcı Adı veya Şifre Hatalı!";
+                lblHata.Visible = true;
+                //MessageBox.Show("Hatalı bilgi girişi! Lütfen tekrar deneyiniz.", "KONTROL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            
+        }
+        //eski
         private void giris()
         {
-            SqlCommand cmd = new SqlCommand("Select * from T_Kullanici where user_name=@username AND pass=@password", bgl.baglanti());
-            cmd.Parameters.AddWithValue("username", txt_username.Text);
-            cmd.Parameters.AddWithValue("password", txt_pass.Text);
+            DashBoard dashboard = new DashBoard();
+            //FirmaId-kullaniciid alınır.
+            dashboard.firmaId=Convert.ToInt32(genel.Veri("Kullanici @username='"+ txt_username.Text+"',@pass='"+txt_pass.Text+"'","Kullanici_id"));
+            //FirmaAdi alınır.
+            dashboard.Firma_Adi=Convert.ToString(genel.Veri("Kullanici @username='"+ txt_username.Text+"',@pass='"+txt_pass.Text+"'","Firma_Adi"));
+
+
+
+            SqlCommand cmd = new SqlCommand("Kullanici @username='"+txt_username.Text+"' ,@pass='"+txt_pass.Text+"'", bgl.baglanti());
+            //cmd.Parameters.AddWithValue("K_adi", txt_username.Text);
+            //cmd.Parameters.AddWithValue("password", txt_pass.Text);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                DashBoard dashboard = new DashBoard();
-                dashboard.firmaId = (int)dr[0];
-                dashboard.Firma_Adi = (string)dr[7];
                 dashboard.Show();
                 this.Hide();
             }
@@ -53,19 +89,13 @@ namespace MainDashboard
         {
             if (txt_username.Text == "" || txt_pass.Text == "")
             {
-                MessageBox.Show("Lütfen boş bırakmayınız.");
-            }
-            if (txt_username.Text!= "")
-            {
-                MessageBox.Show("Şifre alanı boş geçilemez.");
-            }
-            if (txt_pass.Text!="")
-            {
-                MessageBox.Show("Kullanıcı adını boş bırakmayınız!");
+                lblHata.Text = "Kullanıcı Adı ve Şifre Giriniz.";
+                lblHata.Visible = true;
+                //MessageBox.Show("Lütfen boş bırakmayınız.","Giriş Hatası",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
-                giris();
+                Giris();
             }
         }
 

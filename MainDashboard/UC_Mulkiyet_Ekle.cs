@@ -35,28 +35,50 @@ namespace MainDashboard
             genel.cmbdoldur("Durum", "Durum_id", "Durum_Getir", cmbEmlak_Durum);
             //ısıtma combobox
             genel.cmbdoldur("Isitmaadi", "Isitma_id", "Isitma_Getir", guna2ComboBox6);
-            genel.cboxdoldur("Esya", "Esya_id", "Esya_Getir", lstEsyalar);
+            // esyalar checkedlistbox veritabanından ceri gelmeyecek şekilde seğiştirildi
+            //genel.cboxdoldur("Esya", "Esya_id", "Esya_Getir", lstEsyalar);
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            SqlCommand komutekle = new SqlCommand("insert into T_Emlak(Emlakadi,Durum_id,Tur_id,Semt_id,Metrekare,Cephe,Kat,Yapiyasi,Odasayisi,Fiyat,Adres,Isitma_id,Firma_id) values (@ad,@durum,@tur,@semt,@mkare,@cephe,@kat,@yas,@odasayisi,@fiyat,@adres,@isitma,@firmaId)", bgl.baglanti());
-            komutekle.Parameters.AddWithValue("@ad", guna2TextBox1.Text);
-            komutekle.Parameters.AddWithValue("@durum", cmbEmlak_Durum.SelectedValue);
-            komutekle.Parameters.AddWithValue("@tur", cmbEmlak_Turu.SelectedValue);
-            komutekle.Parameters.AddWithValue("@semt", guna2ComboBox11.SelectedValue);
-            komutekle.Parameters.AddWithValue("@mkare", Convert.ToInt32(guna2TextBox5.Text));
-            komutekle.Parameters.AddWithValue("@cephe", guna2ComboBox4.Text);
-            komutekle.Parameters.AddWithValue("@kat", Convert.ToInt32(guna2TextBox3.Text));
-            komutekle.Parameters.AddWithValue("@yas", Convert.ToInt32(guna2TextBox7.Text));
-            komutekle.Parameters.AddWithValue("@odasayisi", guna2TextBox6.Text);
-            komutekle.Parameters.AddWithValue("@fiyat", guna2TextBox4.Text);
-            komutekle.Parameters.AddWithValue("@adres", guna2TextBox2.Text);
-            komutekle.Parameters.AddWithValue("@isitma", guna2ComboBox6.SelectedValue);
-            komutekle.Parameters.AddWithValue("@firmaId", firmaId);
-            komutekle.ExecuteNonQuery();
-            bgl.baglanti().Close();
+            try
+            {
+                //checkedlistbox secili itemleri aralarına "," atarak degiskene aktarır
+                string esyalar="";
+                foreach (string s in lstEsyalar.CheckedItems)
+                {
+                    esyalar += s + ",";
+                }
+                //son "," karakteri siler sonraki satırda insert eder.
+                esyalar = esyalar.Substring(0, esyalar.Length - 1);
+                //Emlak Kayıt
+                genel.ekle("Emlakekle @adi='"+guna2TextBox1.Text+"',@Durumid='"+cmbEmlak_Durum.SelectedValue+"',@turid='"+cmbEmlak_Turu.SelectedValue+"' ,@semtid='"+guna2ComboBox11.SelectedValue+"' ,@metrekare='"+int.Parse(guna2TextBox5.Text)+"',@cephe='"+guna2ComboBox4.Text+"',@kat='"+int.Parse(guna2TextBox3.Text)+"',@yapiyasi='"+int.Parse(guna2TextBox7.Text)+"',@odasayisi='"+guna2TextBox6.Text+"',@fiyat='"+guna2TextBox4.Text+"',@adres='"+guna2TextBox2.Text+"',@isitmaid='"+guna2ComboBox6.SelectedValue+"',@firmaid='"+firmaId+"',@esya='"+esyalar+"'");
+                //MessageBox.Show(esyalar.ToString());
+            //    SqlCommand komutekle = new SqlCommand("insert into T_Emlak(Emlakadi,Durum_id,Tur_id,Semt_id,Metrekare,Cephe,Kat,Yapiyasi,Odasayisi,Fiyat,Adres,Isitma_id,Firma_id,Esyalar) values (@ad,@durum,@tur,@semt,@mkare,@cephe,@kat,@yas,@odasayisi,@fiyat,@adres,@isitma,@firmaId,@esyalar)", bgl.baglanti());
+            //komutekle.Parameters.AddWithValue("@ad", guna2TextBox1.Text);
+            //komutekle.Parameters.AddWithValue("@durum", cmbEmlak_Durum.SelectedValue);
+            //komutekle.Parameters.AddWithValue("@tur", cmbEmlak_Turu.SelectedValue);
+            //komutekle.Parameters.AddWithValue("@semt", guna2ComboBox11.SelectedValue);
+            //komutekle.Parameters.AddWithValue("@mkare", int.Parse(guna2TextBox5.Text));
+            //komutekle.Parameters.AddWithValue("@cephe", guna2ComboBox4.Text);
+            //komutekle.Parameters.AddWithValue("@kat", int.Parse(guna2TextBox3.Text));
+            //komutekle.Parameters.AddWithValue("@yas", int.Parse(guna2TextBox7.Text));
+            //komutekle.Parameters.AddWithValue("@odasayisi", guna2TextBox6.Text);
+            //komutekle.Parameters.AddWithValue("@fiyat", guna2TextBox4.Text);
+            //komutekle.Parameters.AddWithValue("@adres", guna2TextBox2.Text);
+            //komutekle.Parameters.AddWithValue("@isitma", guna2ComboBox6.SelectedValue);
+            //komutekle.Parameters.AddWithValue("@firmaId", firmaId);
+            //komutekle.Parameters.AddWithValue("@esyalar", esyalar);
+            //komutekle.ExecuteNonQuery();
             MessageBox.Show("Emlak Kaydedildi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch(Exception hata)
+            {
+                MessageBox.Show(hata.Message, "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+            }
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -92,18 +114,22 @@ namespace MainDashboard
         {
 
         }
-
+        //Eşyalı mı combobox , GEREK YOK SİLİNMELİ m.
         private void guna2ComboBox7_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (guna2ComboBox7.SelectedValue != null)
-            {
-                var item = guna2ComboBox7.SelectedItem.ToString();
-                lstEsyalar.Enabled = item == "Evet";
-            }
+            //if (guna2ComboBox7.SelectedValue != null)
+            //{
+            //    var item = guna2ComboBox7.SelectedItem.ToString();
+            //    lstEsyalar.Enabled = item == "Evet";
+            //}
+            //else
+            //{ 
+            //    lstEsyalar.Enabled = false;
+            //}
+            if (guna2ComboBox7.Text == "Evet")
+                lstEsyalar.Enabled = true;
             else
-            { 
                 lstEsyalar.Enabled = false;
-            }
         }
 
         private void lstEsyalar_SelectedIndexChanged(object sender, EventArgs e)

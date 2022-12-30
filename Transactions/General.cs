@@ -36,6 +36,7 @@ namespace Transactions
             cmb.ValueMember = _ValueMember;
             
         }
+        //CHECKEDLİSTBOX VERİ AKTARMA
         public void cboxdoldur(string _DisplayMember, string _ValueMember, string _StoredProcedure, CheckedListBox clbox)
         {
             DataTable dtb = new DataTable();
@@ -44,8 +45,6 @@ namespace Transactions
                 using (SqlCommand cmd = conn.CreateCommand())
                 {
                     cmd.CommandText = _StoredProcedure;
-                    //aşağıdaki satır parametreli procedurlerde hata verir
-                    //cmd.CommandType = CommandType.StoredProcedure;
                     using (SqlDataAdapter adap = new SqlDataAdapter(cmd))
                     {
                         adap.Fill(dtb);
@@ -57,7 +56,45 @@ namespace Transactions
             clbox.DataSource = dtb;
             clbox.DisplayMember = _DisplayMember;
             clbox.ValueMember = _ValueMember;
+        }
+        //EKLEME
+        public void ekle(string _StoredProcedure)
+        {
+            SqlCommand Ekle = new SqlCommand(_StoredProcedure, ac.baglanti());
+            Ekle.ExecuteNonQuery();
+            ac.baglanti().Close();
+        }
+        //DATAGRİDVİEW VERİ AKTARMA
+        public void listele(string _StoredProcedure,DataGridView dtg)
+        {
+            DataTable dtb = new DataTable();
+            using (SqlConnection conn = ac.baglanti())
+            {
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = _StoredProcedure;
+                    using (SqlDataAdapter adap = new SqlDataAdapter(cmd))
+                    {
+                        adap.Fill(dtb);
+                    }
+                }
+                conn.Close();
 
+            }
+            dtg.DataSource = dtb;
+        }
+        //SÜTUNDAN VERİ ÇEKME
+        public object Veri(string _StoredProcedure,string sutun)
+        {
+            object veri=-1;
+            SqlCommand komut = new SqlCommand(_StoredProcedure,ac.baglanti());
+            SqlDataReader oku=komut.ExecuteReader();
+            while(oku.Read())
+            {
+                veri = oku[sutun];
+            }
+            ac.baglanti().Close();
+            return veri;
         }
     }
 }

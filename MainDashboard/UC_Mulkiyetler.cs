@@ -17,15 +17,14 @@ namespace MainDashboard
         SQLAcces bgl = new SQLAcces();
         General genel = new General();
         public int firmaId { get; set; }
-        satis frmSatis;
-        incele frmIncele = new incele();
+        frmSatis frmSatis;
+        frmİncele frmIncele = new frmİncele();
         public UC_Mulkiyetler(int firma_id)
         {
             firmaId = firma_id;
-            frmSatis = new satis(firmaId);
+            frmSatis = new frmSatis(firmaId);
             InitializeComponent();
         }
-        //SqlConnection conn = new SqlConnection("Data Source=MAZLUM;Initial Catalog=Emlak;Integrated Security=True");
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
@@ -40,20 +39,8 @@ namespace MainDashboard
             genel.cmbdoldur("Durum", "Durum_id", "Durum_Getir", cmbEmlak_Durum);
             //emlak tipi
             genel.cmbdoldur("Emlaktipiadi", "Emlaktipi_id", "Tip_Getir", cmbEmlak_Tipi);
-            //emlaklar datagrid
-            emlaklar();
-
-        }
-        public void emlaklar()
-        {
-            //emlaklar datagrid
-            SqlCommand komut4 = new SqlCommand("execute emlaklar @FirmaId = @firmaId", bgl.baglanti());
-            komut4.Parameters.AddWithValue("@firmaId", firmaId);
-            SqlDataAdapter da4 = new SqlDataAdapter(komut4);
-            DataTable dt4 = new DataTable();
-            da4.Fill(dt4);
-            guna2DataGridView1.DataSource = dt4;
-            bgl.baglanti().Close();
+            //EMLAK LİSTELEME
+            genel.listele("execute emlaklar @FirmaId ='"+firmaId+"'", guna2DataGridView1);
         }
 
         private void guna2ComboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -89,30 +76,34 @@ namespace MainDashboard
             genel.cmbdoldur("Turu","Tur_id","Emlakturu_Getir @tipid='"+cmbEmlak_Tipi.SelectedValue+"'",guna2ComboBox2);
         }
 
-        private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void guna2DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
-            //incele
             if (e.RowIndex >= 0)
             {
+                //basılan satırdan emlak_id alınıp procedure'e parametre olarak gonderilecek 
+                object emlakid = guna2DataGridView1.Rows[e.RowIndex].Cells[2].Value;
+                //incele
                 if (e.ColumnIndex == 0)
                 {
-                    SqlCommand komut = new SqlCommand("execute emlakincele @emlak_id=@emlakid", bgl.baglanti());
-                    komut.Parameters.AddWithValue("@emlakid", guna2DataGridView1.Rows[e.RowIndex].Cells[2].Value);
-                    SqlDataAdapter da = new SqlDataAdapter(komut);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    frmIncele.guna2DataGridView1.DataSource = dt;
+                    genel.listele("emlakincele @emlak_id='" + emlakid + "'", frmIncele.guna2DataGridView1);
+                    //SqlCommand komut = new SqlCommand("execute emlakincele @emlak_id=@emlakid", bgl.baglanti());
+                    //komut.Parameters.AddWithValue("@emlakid", guna2DataGridView1.Rows[e.RowIndex].Cells[2].Value);
+                    //SqlDataAdapter da = new SqlDataAdapter(komut);
+                    //DataTable dt = new DataTable();
+                    //da.Fill(dt);
+                    //frmIncele.guna2DataGridView1.DataSource = dt;
                     frmIncele.ShowDialog();
                 }
+                //satış
                 if (e.ColumnIndex == 1)
                 {
-                    SqlCommand komut = new SqlCommand("execute emlakincele @emlak_id=@emlakid", bgl.baglanti());
-                    komut.Parameters.AddWithValue("@emlakid", guna2DataGridView1.Rows[e.RowIndex].Cells[2].Value);
-                    SqlDataAdapter da = new SqlDataAdapter(komut);
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    frmSatis.guna2DataGridView1.DataSource = dt;
+                    genel.listele("emlakincele @emlak_id='" + emlakid + "'", frmSatis.guna2DataGridView1);
+                    //SqlCommand komut = new SqlCommand("execute emlakincele @emlak_id=@emlakid", bgl.baglanti());
+                    //komut.Parameters.AddWithValue("@emlakid", guna2DataGridView1.Rows[e.RowIndex].Cells[2].Value);
+                    //SqlDataAdapter da = new SqlDataAdapter(komut);
+                    //DataTable dt = new DataTable();
+                    //da.Fill(dt);
+                    //frmSatis.guna2DataGridView1.DataSource = dt;
                     frmSatis.ShowDialog();
                 }
 
