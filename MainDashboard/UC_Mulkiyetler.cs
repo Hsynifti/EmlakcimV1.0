@@ -27,10 +27,11 @@ namespace MainDashboard
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            genel.listele("EmlakAra @FirmaId='" + firmaId + "',@tip='" + cmbEmlak_Tipi.Text + "',@tur='" + cmbEmlak_Turu.Text + "',@durum='" + cmbEmlak_Durum.Text + "',@il='" + cmbEmlak_Sehir.Text + "',@ilce='" + cmbEmlak_Ilce.Text + "',@semt='" + cmbEmlak_Semt.Text + "'", dtg_Emlaklar);
 
         }
         #region İL-İLÇE-MAHALLE comboboxlara atama
-        
+
         private void UC_Mulkiyetler_Load(object sender, EventArgs e)
         {
             //şehir combobox
@@ -40,7 +41,7 @@ namespace MainDashboard
             //emlak tipi
             genel.cmbdoldur("Emlaktipiadi", "Emlaktipi_id", "Tip_Getir", cmbEmlak_Tipi);
             //EMLAK LİSTELEME
-            genel.listele("execute emlaklar @FirmaId ='"+firmaId+"'", guna2DataGridView1);
+            genel.listele("execute emlaklar @FirmaId ='"+firmaId+"'", dtg_Emlaklar);
         }
 
         private void guna2ComboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -50,7 +51,7 @@ namespace MainDashboard
         private void guna2ComboBox4_SelectionChangeCommitted(object sender, EventArgs e)
         {
             //ilçeler combobox
-            genel.cmbdoldur("Ilceadi","Ilce_id","Ilce_Getir @ilid='"+cmbEmlak_Sehir.SelectedValue+"'",guna2ComboBox3);
+            genel.cmbdoldur("Ilceadi","Ilce_id","Ilce_Getir @ilid='"+cmbEmlak_Sehir.SelectedValue+"'",cmbEmlak_Ilce);
         }
 
         private void guna2ComboBox6_SelectionChangeCommitted(object sender, EventArgs e)
@@ -60,7 +61,7 @@ namespace MainDashboard
         private void guna2ComboBox3_SelectionChangeCommitted(object sender, EventArgs e)
         {
             //mahalle-köy combobox
-            genel.cmbdoldur("Semtadi", "Semt_id", "Semt_Getir @ilceid='"+guna2ComboBox3.SelectedValue+"'", guna2ComboBox6);
+            genel.cmbdoldur("Semtadi", "Semt_id", "Semt_Getir @ilceid='"+cmbEmlak_Ilce.SelectedValue+"'", cmbEmlak_Semt);
 
         }
         #endregion
@@ -73,7 +74,7 @@ namespace MainDashboard
         private void guna2ComboBox1_SelectionChangeCommitted(object sender, EventArgs e)
         {
 
-            genel.cmbdoldur("Turu","Tur_id","Emlakturu_Getir @tipid='"+cmbEmlak_Tipi.SelectedValue+"'",guna2ComboBox2);
+            genel.cmbdoldur("Turu","Tur_id","Emlakturu_Getir @tipid='"+cmbEmlak_Tipi.SelectedValue+"'",cmbEmlak_Turu);
         }
 
         private void guna2DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -81,7 +82,7 @@ namespace MainDashboard
             if (e.RowIndex >= 0)
             {
                 //basılan satırdan emlak_id alınıp procedure'e parametre olarak gonderilecek 
-                object emlakid = guna2DataGridView1.Rows[e.RowIndex].Cells[2].Value;
+                object emlakid = dtg_Emlaklar.Rows[e.RowIndex].Cells[2].Value;
                 //incele
                 if (e.ColumnIndex == 0)
                 {

@@ -41,9 +41,8 @@ namespace MainDashboard
             //kullanici adi ve sifre
             string K_Adi = Convert.ToString(genel.Veri("Kullanici @username='" +Login.User_Name+ "',@pass='" +Login.Password+ "'", "user_name"));
             string Sifre = Convert.ToString(genel.Veri("Kullanici @username='" +Login.User_Name+ "',@pass='" +Login.Password+ "'", "pass"));
-
-
-            if(K_Adi==Login.User_Name && Sifre==Login.Password)
+            //Boolean active = Convert.ToBoolean(genel.Veri("Kullanici_Active", "@active"));
+            if(K_Adi == Login.User_Name && Sifre == Login.Password )
             {            
                 dashboard.Show();
                 lblHata.Visible = false;

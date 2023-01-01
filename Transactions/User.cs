@@ -17,21 +17,18 @@ namespace Transactions
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Contact { get; set; }
-        public IsActive Active { get; set; }
-
+        public byte active { get; set; }
         public string User_Name
         {
             get { return user_name; }
-            set
-            {
-                user_name = value;
-            }
+            set { user_name = value; }
         }
         public string Password
         {
             get { return password; }
             set { password = value; }
         }
+
         public void Girisyap(string Kullanici_Adi,string Sifre)
         {
             SQLAcces ac = new SQLAcces();
@@ -49,11 +46,6 @@ namespace Transactions
             }
         }
 
-    }
-    public enum IsActive:byte
-    {
-        Active = 1,
-        Inactive = 0,
     }
     
 }
