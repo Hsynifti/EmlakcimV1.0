@@ -22,6 +22,8 @@ namespace MainDashboard
         SQLAcces bgl = new SQLAcces();
         General genel = new General(); 
         User Login=new User();
+        private int firmaId { get; set; }
+        private string firma_adi { get; set; }
         private void guna2Button2_Click(object sender, EventArgs e)
         {
         }
@@ -33,14 +35,21 @@ namespace MainDashboard
         {
             Login.User_Name = txt_username.Text;
             Login.Password = txt_pass.Text;
+            Login.Company_ID = firmaId;
+            Login.Company_Name = firma_adi;
             DashBoard dashboard = new DashBoard();
             //FirmaId-kullaniciid alınır.
-            dashboard.firmaId = Convert.ToInt32(genel.Veri("Kullanici @username='" + Login.User_Name+ "',@pass='" + Login.Password + "'", "Kullanici_id"));
+            //dashboard.firmaId = Convert.ToInt32(genel.Veri("Kullanici @username='" + Login.User_Name+ "',@pass='" + Login.Password + "'", "Kullanici_id"));
+            dashboard.firmaId = Login.CompanyID_Getir();
             //FirmaAdi alınır.
-            dashboard.Firma_Adi = Convert.ToString(genel.Veri("Kullanici @username='" +Login.User_Name+ "',@pass='" +Login.Password+ "'", "Firma_Adi"));
+            // dashboard.Firma_Adi = Convert.ToString(genel.Veri("Kullanici @username='" +Login.User_Name+ "',@pass='" +Login.Password+ "'", "Firma_Adi"));
+            dashboard.Firma_Adi = Login.CompanyName_Getir();
             //kullanici adi ve sifre
             string K_Adi = Convert.ToString(genel.Veri("Kullanici @username='" +Login.User_Name+ "',@pass='" +Login.Password+ "'", "user_name"));
             string Sifre = Convert.ToString(genel.Veri("Kullanici @username='" +Login.User_Name+ "',@pass='" +Login.Password+ "'", "pass"));
+            Login.User_Name = txt_username.Text;
+            Login.Password = txt_pass.Text;
+            //Login.Giris(txt_username.Text, txt_pass.Text);
             //Boolean active = Convert.ToBoolean(genel.Veri("Kullanici_Active", "@active"));
             if(K_Adi == Login.User_Name && Sifre == Login.Password )
             {            
@@ -113,6 +122,15 @@ namespace MainDashboard
         {
             if (e.KeyCode == Keys.Enter)
                 btn_login.PerformClick();
+        }
+        private void login_Load(object sender, EventArgs e)
+        {
+            /*
+            Login.Company_ID = firmaId;
+            DashBoard dashboard = new DashBoard();
+            dashboard.firmaId = Login.Girisyap();
+            */
+
         }
     }
     

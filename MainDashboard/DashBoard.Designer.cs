@@ -62,7 +62,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(218, 801);
+            this.guna2Panel1.Size = new System.Drawing.Size(221, 801);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -106,7 +106,7 @@
             this.btn_Logout.HoverState.ForeColor = System.Drawing.Color.Transparent;
             this.btn_Logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_Logout.Image")));
             this.btn_Logout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_Logout.Location = new System.Drawing.Point(35, 726);
+            this.btn_Logout.Location = new System.Drawing.Point(38, 465);
             this.btn_Logout.Name = "btn_Logout";
             this.btn_Logout.Size = new System.Drawing.Size(180, 45);
             this.btn_Logout.TabIndex = 8;
@@ -295,9 +295,9 @@
             this.panelDashboard.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelDashboard.BackColor = System.Drawing.SystemColors.Window;
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDashboard.Location = new System.Drawing.Point(218, 0);
+            this.panelDashboard.Location = new System.Drawing.Point(221, 0);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(1223, 801);
+            this.panelDashboard.Size = new System.Drawing.Size(1220, 801);
             this.panelDashboard.TabIndex = 1;
             // 
             // DashBoard

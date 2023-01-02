@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "UC_AnaSayfa";
-            this.Size = new System.Drawing.Size(1255, 666);
+            this.Size = new System.Drawing.Size(1245, 756);
             this.ResumeLayout(false);
 
         }
