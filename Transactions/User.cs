@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace Transactions
 {
@@ -13,6 +15,7 @@ namespace Transactions
     public class User
     {
         General genel = new General();
+        SQLAcces ac = new SQLAcces();
         
         public int Company_ID { get; set; }
         private string user_name { get; set; }
@@ -21,7 +24,7 @@ namespace Transactions
         public string Surname { get; set; }
         public string Contact { get; set; }
         public string Company_Name { get; set; }
-        public byte active { get; set; }
+        public bool active { get; set; }
         public string User_Name
         {
             get { return user_name; }
@@ -60,14 +63,6 @@ namespace Transactions
             Company_Name = Convert.ToString(genel.Veri("Kullanici @username='" + user_name + "',@pass='" + password + "'", "Firma_Adi"));
             return Company_Name;
         }
-        public string Giris(string user_name, string password)
-        {
-            user_name = Convert.ToString(genel.Veri("Kullanici @username='" + user_name + "',@pass='" + password + "'", "user_name"));
-            password = Convert.ToString(genel.Veri("Kullanici @username='" + user_name + "',@pass='" + password + "'", "pass"));
-            return user_name;
-            return password;
-        }
-            
     }
     
 }

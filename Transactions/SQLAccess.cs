@@ -15,6 +15,13 @@ namespace Transactions
             conn.Open();
             return conn;
         }
-        
+        public int ackapa(SqlCommand cmd)
+        {
+            cmd.Connection.Open();
+            int sonuc = cmd.ExecuteNonQuery();
+            cmd.Connection.Close();
+            return sonuc;
+        }
+
     }
 }
