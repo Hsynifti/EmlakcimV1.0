@@ -32,13 +32,6 @@ namespace MainDashboard
         {
             //SATISLAR DATAGRİDVİEW
             genel.listele("satislar @FirmaId = '"+firmaId+"'", guna2DataGridView1);
-            //SqlCommand komut = new SqlCommand("execute satislar @FirmaId = @firmaId", bgl.baglanti());
-            //komut.Parameters.AddWithValue("@firmaId", firmaId);
-            //SqlDataAdapter da = new SqlDataAdapter(komut);
-            //DataTable dt = new DataTable();
-            //da.Fill(dt);
-            //guna2DataGridView1.DataSource = dt;
-            //bgl.baglanti().Close();
         }
     }
 }

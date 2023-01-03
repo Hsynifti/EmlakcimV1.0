@@ -75,11 +75,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dts_Emlakcim.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Dts_Emlakcim.xsd</DependentUpon>
-    </Compile>
     <Compile Include="frmİncele.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,17 +177,8 @@
     <EmbeddedResource Include="UC_Satislar.resx">
       <DependentUpon>UC_Satislar.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Dts_Emlakcim.xsc">
-      <DependentUpon>Dts_Emlakcim.xsd</DependentUpon>
-    </None>
-    <None Include="Dts_Emlakcim.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Dts_Emlakcim.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Dts_Emlakcim.xss">
-      <DependentUpon>Dts_Emlakcim.xsd</DependentUpon>
-    </None>
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagramEmlakcim.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

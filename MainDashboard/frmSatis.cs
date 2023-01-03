@@ -49,20 +49,9 @@ namespace MainDashboard
             else
             {
                 int tabloemlakid = Convert.ToInt32(guna2DataGridView1.Rows[0].Cells[0].Value);
-
-
                 int EmlakID = -1;
                 //Satiş tablosundan belli bir Emlak_id'i çekilecek varsa değişkene atar yok ise üstteki mümkün olmayan negatif değer sabit kalır
                 EmlakID=Convert.ToInt32(genel.Veri("SatisEmlakID @EmlakId='"+tabloemlakid+"'", "Emlak_id"));
-                
-                //SqlCommand komut = new SqlCommand("select * from T_Satis where Emlak_id='" + tabloemlakid + "'", bgl.baglanti());
-                //SqlDataReader oku = komut.ExecuteReader();
-                //while (oku.Read())
-                //{
-                //    EmlakID = Convert.ToInt32(oku["Emlak_id"].ToString());
-                //}
-
-
                 //seçilen emlağın emlak_id'i satış tablosunda da varsa başkası adına kayıtlı mesajı verip satış işlemi olmaz. 
                 if (EmlakID == tabloemlakid)
                 {
@@ -71,15 +60,7 @@ namespace MainDashboard
                 else
                 {
                     //Satış tablosuna ekleme
-                    genel.ekle("Satisekle @EmlakId='"+tabloemlakid+"' ,@MusteriId='"+MusteriID+"',@FirmaId='"+firmaId+"'");
-                    //SqlCommand komut1 = new SqlCommand("insert into T_Satis (Emlak_id,Musteri_id,Firma_id) values (@emlakid,@musteriid,@firma_id)", bgl.baglanti());
-                    //komut1.Parameters.AddWithValue("@emlakid", tabloemlakid);
-                    //komut1.Parameters.AddWithValue("@musteriid", MusteriID);
-                    //komut1.Parameters.AddWithValue("@firma_id", firmaId);
-                    //komut1.ExecuteNonQuery();
-                    //bgl.baglanti().Close();
-
-
+                    genel.ekle("Satisekle @EmlakId='" + tabloemlakid + "' ,@MusteriId='" + MusteriID + "',@FirmaId='" + firmaId + "'");
                     MessageBox.Show("Emlak Başarıyla Devredildi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
