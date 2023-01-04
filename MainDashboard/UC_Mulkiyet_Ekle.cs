@@ -65,7 +65,8 @@ namespace MainDashboard
                     "@SatinAlinanFiyat='" + Convert.ToInt32(txtSatinAlinanFiyat.Text) + "'," +
                     "@adres='" +txtAdres.Text+"'," +
                     "@isitmaid='"+txtIsitma.SelectedValue+"'," +
-                    "@firmaid='"+firmaId+"',@esya='"+esyalar+"'");
+                    "@firmaid='"+firmaId+"'," +
+                    "@esya='"+esyalar+"'");
 
             MessageBox.Show("Emlak Kaydedildi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -114,15 +115,6 @@ namespace MainDashboard
         //Eşyalı mı combobox , GEREK YOK SİLİNMELİ m.
         private void guna2ComboBox7_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (guna2ComboBox7.SelectedValue != null)
-            //{
-            //    var item = guna2ComboBox7.SelectedItem.ToString();
-            //    lstEsyalar.Enabled = item == "Evet";
-            //}
-            //else
-            //{ 
-            //    lstEsyalar.Enabled = false;
-            //}
             if (guna2ComboBox7.Text == "Evet")
                 lstEsyalar.Enabled = true;
             else
