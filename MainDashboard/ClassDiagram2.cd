@@ -1,2 +1,93 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MainDashboard.DashBoard">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBCAAhJACABAEAAAAagAAgKAACSgAAEIQAQgAEAAEE=</HashCode>
+      <FileName>DashBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainDashboard.frmİncele">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAASAACAAQCIAAgCAAAACACACAABgpBCtgAAAAgE=</HashCode>
+      <FileName>frmİncele.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainDashboard.frmSatis">
+    <Position X="18.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIADAAABIAEBCEAAYyACAwAAAgEAAIYACCAwA=</HashCode>
+      <FileName>frmSatis.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainDashboard.login">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAkAACAEiBIAAACAAACCACACBAggAACABAAAAI0=</HashCode>
+      <FileName>login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainDashboard.Program">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainDashboard.UC_AnaSayfa">
+    <Position X="15" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACEAAAAAAACAAAACAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>UC_AnaSayfa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainDashboard.UC_Hesap">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAACCAAAAAAAA9wAAAAAAAAE=</HashCode>
+      <FileName>UC_Hesap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainDashboard.UC_Mulkiyet_Ekle">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIBIQJACAIAAMBAACAAICSAAACAABo/4D/gwAAIgE=</HashCode>
+      <FileName>UC_Mulkiyet_Ekle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainDashboard.UC_Mulkiyetler">
+    <Position X="13.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQYBIgIADIAAgNwABGEwAAGAAEGAABgAAEAiQACIAM=</HashCode>
+      <FileName>UC_Mulkiyetler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainDashboard.UC_Musteri_Islemleri">
+    <Position X="15" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAQKADAAAAIACACEBAGSEQQCAAAgABhAAAAAAAE=</HashCode>
+      <FileName>UC_Musteri_Islemleri.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainDashboard.UC_Satislar">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIASAAAAIAAACAQAACACAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>UC_Satislar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainDashboard.Properties.Resources">
+    <Position X="13.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainDashboard.Properties.Settings">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

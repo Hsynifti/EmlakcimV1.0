@@ -28,21 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DataSetEmlaklar = new Guna.Charts.WinForms.GunaAreaDataset();
-            this.DataSetSatislar = new Guna.Charts.WinForms.GunaAreaDataset();
             this.SuspendLayout();
-            // 
-            // DataSetEmlaklar
-            // 
-            this.DataSetEmlaklar.BorderColor = System.Drawing.Color.Empty;
-            this.DataSetEmlaklar.FillColor = System.Drawing.Color.Empty;
-            this.DataSetEmlaklar.Label = "Emlaklar";
-            // 
-            // DataSetSatislar
-            // 
-            this.DataSetSatislar.BorderColor = System.Drawing.Color.Empty;
-            this.DataSetSatislar.FillColor = System.Drawing.Color.Empty;
-            this.DataSetSatislar.Label = "Satışlar";
             // 
             // UC_AnaSayfa
             // 
@@ -55,7 +41,5 @@
         }
 
         #endregion
-        private Guna.Charts.WinForms.GunaAreaDataset DataSetEmlaklar;
-        private Guna.Charts.WinForms.GunaAreaDataset DataSetSatislar;
     }
 }

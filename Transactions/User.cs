@@ -18,8 +18,8 @@ namespace Transactions
         SQLAcces ac = new SQLAcces();
         
         public int Company_ID { get; set; }
-        private string user_name { get; set; }
-        private string password { get; set; }
+        private string user_name;
+        private string password;
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Contact { get; set; }
@@ -35,24 +35,6 @@ namespace Transactions
             get { return password; }
             set { password = value; }
         }
-        /*
-        public void Girisyap(string Kullanici_Adi, string Sifre)
-        {
-            SQLAcces ac = new SQLAcces();
-            General genel = new General();
-            using (SqlConnection conn = ac.baglanti())
-            {
-                String query = "Select * from T_Kullanici where user_name=@username AND pass=@password";
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-
-                    cmd.Parameters.AddWithValue("username", Kullanici_Adi);
-                    cmd.Parameters.AddWithValue("password", Sifre);
-                    SqlDataReader dr = cmd.ExecuteReader();
-                }
-            }
-        }
-        */
         public int CompanyID_Getir()
         {
             Company_ID = Convert.ToInt32(genel.Veri("Kullanici @username='" + user_name + "',@pass='" + password + "'", "Kullanici_id"));

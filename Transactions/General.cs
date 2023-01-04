@@ -1,4 +1,5 @@
-﻿using Guna.Charts.WinForms;
+﻿using Guna.Charts.Interfaces;
+using Guna.Charts.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -96,6 +97,23 @@ namespace Transactions
             }
             ac.baglanti().Close();
             return veri;
+        }
+        public void Counter(string _StoredProcedure,IGunaChart gunaChart)
+        {
+            DataSet ds = new DataSet();
+            using (SqlConnection conn = ac.baglanti())
+            {
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = _StoredProcedure;
+                    using (SqlDataAdapter adap = new SqlDataAdapter(cmd))
+                    {
+                        adap.Fill(ds);
+                    }
+                }
+                conn.Close();
+
+            }
         }
         
     }

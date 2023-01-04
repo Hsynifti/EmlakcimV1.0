@@ -54,9 +54,14 @@ namespace MainDashboard
                 lblHata.Visible = false;
                 this.Hide();
             }
-            else
+            else if (Active == false)
             {
                 MessageBox.Show("Kullanıcı Aktif Değil. Lütfen Yöneticinizle İrtibata Geçiniz!","Giriş Hatası",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+                lblHata.Text = "Kullanıcı Adı Veya Şifre Yanlış";
+                lblHata.Visible = true;
             }
             
         }

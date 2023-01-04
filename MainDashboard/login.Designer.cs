@@ -113,12 +113,12 @@ namespace MainDashboard
             // 
             this.lblHata.AutoSize = true;
             this.lblHata.BackColor = System.Drawing.Color.Transparent;
-            this.lblHata.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblHata.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.lblHata.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblHata.ForeColor = System.Drawing.Color.Red;
             this.lblHata.Location = new System.Drawing.Point(630, 283);
             this.lblHata.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHata.Name = "lblHata";
-            this.lblHata.Size = new System.Drawing.Size(0, 17);
+            this.lblHata.Size = new System.Drawing.Size(0, 19);
             this.lblHata.TabIndex = 22;
             this.lblHata.Visible = false;
             // 

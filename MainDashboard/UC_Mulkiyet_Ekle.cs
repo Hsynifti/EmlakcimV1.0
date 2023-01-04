@@ -34,7 +34,7 @@ namespace MainDashboard
             //durum combobox
             genel.cmbdoldur("Durum", "Durum_id", "Durum_Getir", cmbEmlak_Durum);
             //ısıtma combobox
-            genel.cmbdoldur("Isitmaadi", "Isitma_id", "Isitma_Getir", guna2ComboBox6);
+            genel.cmbdoldur("Isitmaadi", "Isitma_id", "Isitma_Getir", txtIsitma);
             // esyalar checkedlistbox veritabanından ceri gelmeyecek şekilde seğiştirildi
             //genel.cboxdoldur("Esya", "Esya_id", "Esya_Getir", lstEsyalar);
         }
@@ -52,24 +52,21 @@ namespace MainDashboard
                 //son "," karakteri siler sonraki satırda insert eder.
                 esyalar = esyalar.Substring(0, esyalar.Length - 1);
                 //Emlak Kayıt
-                genel.ekle("Emlakekle @adi='"+guna2TextBox1.Text+"',@Durumid='"+cmbEmlak_Durum.SelectedValue+"',@turid='"+cmbEmlak_Turu.SelectedValue+"' ,@semtid='"+guna2ComboBox11.SelectedValue+"' ,@metrekare='"+int.Parse(guna2TextBox5.Text)+"',@cephe='"+guna2ComboBox4.Text+"',@kat='"+int.Parse(guna2TextBox3.Text)+"',@yapiyasi='"+int.Parse(guna2TextBox7.Text)+"',@odasayisi='"+guna2TextBox6.Text+"',@fiyat='"+guna2TextBox4.Text+"',@adres='"+guna2TextBox2.Text+"',@isitmaid='"+guna2ComboBox6.SelectedValue+"',@firmaid='"+firmaId+"',@esya='"+esyalar+"'");
-                //MessageBox.Show(esyalar.ToString());
-            //    SqlCommand komutekle = new SqlCommand("insert into T_Emlak(Emlakadi,Durum_id,Tur_id,Semt_id,Metrekare,Cephe,Kat,Yapiyasi,Odasayisi,Fiyat,Adres,Isitma_id,Firma_id,Esyalar) values (@ad,@durum,@tur,@semt,@mkare,@cephe,@kat,@yas,@odasayisi,@fiyat,@adres,@isitma,@firmaId,@esyalar)", bgl.baglanti());
-            //komutekle.Parameters.AddWithValue("@ad", guna2TextBox1.Text);
-            //komutekle.Parameters.AddWithValue("@durum", cmbEmlak_Durum.SelectedValue);
-            //komutekle.Parameters.AddWithValue("@tur", cmbEmlak_Turu.SelectedValue);
-            //komutekle.Parameters.AddWithValue("@semt", guna2ComboBox11.SelectedValue);
-            //komutekle.Parameters.AddWithValue("@mkare", int.Parse(guna2TextBox5.Text));
-            //komutekle.Parameters.AddWithValue("@cephe", guna2ComboBox4.Text);
-            //komutekle.Parameters.AddWithValue("@kat", int.Parse(guna2TextBox3.Text));
-            //komutekle.Parameters.AddWithValue("@yas", int.Parse(guna2TextBox7.Text));
-            //komutekle.Parameters.AddWithValue("@odasayisi", guna2TextBox6.Text);
-            //komutekle.Parameters.AddWithValue("@fiyat", guna2TextBox4.Text);
-            //komutekle.Parameters.AddWithValue("@adres", guna2TextBox2.Text);
-            //komutekle.Parameters.AddWithValue("@isitma", guna2ComboBox6.SelectedValue);
-            //komutekle.Parameters.AddWithValue("@firmaId", firmaId);
-            //komutekle.Parameters.AddWithValue("@esyalar", esyalar);
-            //komutekle.ExecuteNonQuery();
+                genel.ekle("Emlakekle @adi='"+txtEmlak_Adi.Text+"'," +
+                    "@Durumid='"+cmbEmlak_Durum.SelectedValue+"'," +
+                    "@turid='"+cmbEmlak_Turu.SelectedValue+"' ," +
+                    "@semtid='"+cmb_Semt.SelectedValue+"' ," +
+                    "@metrekare='"+int.Parse(txtMetrekare.Text)+"'," +
+                    "@cephe='"+cmb_Cephe.Text+"'," +
+                    "@kat='"+int.Parse(txtKat.Text)+"'," +
+                    "@yapiyasi='"+txtYapi_Yasi.Text+"'," +
+                    "@odasayisi='"+txtOda_Sayisi.Text+"'," +
+                    "@fiyat='"+Convert.ToInt32(txtSatisFiyati.Text)+"'," +
+                    "@SatinAlinanFiyat='" + Convert.ToInt32(txtSatinAlinanFiyat.Text) + "'," +
+                    "@adres='" +txtAdres.Text+"'," +
+                    "@isitmaid='"+txtIsitma.SelectedValue+"'," +
+                    "@firmaid='"+firmaId+"',@esya='"+esyalar+"'");
+
             MessageBox.Show("Emlak Kaydedildi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(Exception hata)
@@ -100,13 +97,13 @@ namespace MainDashboard
         private void guna2ComboBox3_SelectionChangeCommitted(object sender, EventArgs e)
         {
             //mahalle-köy combobox
-            genel.cmbdoldur("Semtadi", "Semt_id", "Semt_Getir @ilceid='" + guna2ComboBox3.SelectedValue + "'", guna2ComboBox11);
+            genel.cmbdoldur("Semtadi", "Semt_id", "Semt_Getir @ilceid='" + cmb_Ilce.SelectedValue + "'", cmb_Semt);
         }
 
         private void guna2ComboBox10_SelectionChangeCommitted(object sender, EventArgs e)
         {
             //ilçeler combobox
-            genel.cmbdoldur("Ilceadi", "Ilce_id", "Ilce_Getir @ilid='" + cmbEmlak_Sehir.SelectedValue + "'", guna2ComboBox3);
+            genel.cmbdoldur("Ilceadi", "Ilce_id", "Ilce_Getir @ilid='" + cmbEmlak_Sehir.SelectedValue + "'", cmb_Ilce);
 
         }
 

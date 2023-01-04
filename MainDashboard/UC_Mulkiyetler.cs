@@ -87,24 +87,12 @@ namespace MainDashboard
                 if (e.ColumnIndex == 0)
                 {
                     genel.listele("emlakincele @emlak_id='" + emlakid + "'", frmIncele.guna2DataGridView1);
-                    //SqlCommand komut = new SqlCommand("execute emlakincele @emlak_id=@emlakid", bgl.baglanti());
-                    //komut.Parameters.AddWithValue("@emlakid", guna2DataGridView1.Rows[e.RowIndex].Cells[2].Value);
-                    //SqlDataAdapter da = new SqlDataAdapter(komut);
-                    //DataTable dt = new DataTable();
-                    //da.Fill(dt);
-                    //frmIncele.guna2DataGridView1.DataSource = dt;
                     frmIncele.ShowDialog();
                 }
                 //satış
                 if (e.ColumnIndex == 1)
                 {
                     genel.listele("emlakincele @emlak_id='" + emlakid + "'", frmSatis.guna2DataGridView1);
-                    //SqlCommand komut = new SqlCommand("execute emlakincele @emlak_id=@emlakid", bgl.baglanti());
-                    //komut.Parameters.AddWithValue("@emlakid", guna2DataGridView1.Rows[e.RowIndex].Cells[2].Value);
-                    //SqlDataAdapter da = new SqlDataAdapter(komut);
-                    //DataTable dt = new DataTable();
-                    //da.Fill(dt);
-                    //frmSatis.guna2DataGridView1.DataSource = dt;
                     frmSatis.ShowDialog();
                 }
 
