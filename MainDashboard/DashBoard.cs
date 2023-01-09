@@ -66,7 +66,7 @@ namespace MainDashboard
 
         private void btn_Hesap_Click(object sender, EventArgs e)
         {
-            UC_Hesap uC_Hesap = new UC_Hesap();
+            UC_Hesap uC_Hesap = new UC_Hesap(firmaId);
             addusercontrol(uC_Hesap);
         }
 
@@ -101,6 +101,17 @@ namespace MainDashboard
         private void lblKullanici_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdmin_Click_1(object sender, EventArgs e)
+        {
+            UC_Admin uC_Admin = new UC_Admin(firmaId);
+            addusercontrol(uC_Admin);
         }
     }
 }

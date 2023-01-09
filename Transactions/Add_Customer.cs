@@ -25,14 +25,6 @@ namespace Transactions
             {
                 //MUSTERİ EKLEME
                 genel.ekle("Musteriekle @adi='" + Customer_Name + "', @soyadi='" + Customer_Surname + "',@iletisim='" + Customer_Phone + "',@tc='" + Customer_IdentyNo + "',@firmaId='" + Firma_Id + "'");
-                //SqlCommand komut = new SqlCommand("insert into T_Musteri (Musteriadi,Musterisoyadi,Iletisim,TCKimlik,Firma_id) values (@adi,@soyadi,@iletisim,@tckmlk,@firmaId)", bgl.baglanti());
-                //komut.Parameters.AddWithValue("@adi", Customer_Name);
-                //komut.Parameters.AddWithValue("@soyadi", Customer_Surname);
-                //komut.Parameters.AddWithValue("@iletisim", Customer_Phone);
-                //komut.Parameters.AddWithValue("@tckmlk", Customer_IdentyNo);
-                //komut.Parameters.AddWithValue("@firmaId", );
-                //komut.ExecuteNonQuery();
-                //bgl.baglanti().Close();
                 MessageBox.Show("Müşteri Başarıyla Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Customer_Name = Customer_Surname = Customer_Phone = Customer_IdentyNo = "";
 

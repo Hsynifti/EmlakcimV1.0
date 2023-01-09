@@ -18,7 +18,8 @@ namespace MainDashboard
     {
         SQLAcces bgl = new SQLAcces();
         General genel = new General();
-        public int firmaId { get; set; } 
+        public int firmaId { get; set; }
+        public int MusteriID=-1;
         Add_Customer Musteri = new Add_Customer();
         public UC_Musteri_Islemleri(int firma_id)
         {
@@ -45,24 +46,15 @@ namespace MainDashboard
         {
             if (e.RowIndex >= 0)
             {
-                //basılan satırdan emlak_id alınıp procedure'e parametre olarak gonderilecek 
-                object emlakid = dtgMusteriIslemleri.Rows[e.RowIndex].Cells[2].Value;
-
-                //incele
-                if (e.ColumnIndex == 0)
-                {
-                    
-                    
-                }
-                //satış
-                if (e.ColumnIndex == 1)
-                {
-                    
-                    
-                    
-                }
-
+                int secilen = dtgMusteriIslemleri.SelectedCells[0].RowIndex;
+                MusteriID = Convert.ToInt32(dtgMusteriIslemleri.Rows[secilen].Cells["Musteri_id"].Value);
+                btn_Edit.Enabled = true;
             }
+        }
+        
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

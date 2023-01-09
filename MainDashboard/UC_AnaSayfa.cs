@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Transactions;
+using System.Windows.Forms.DataVisualization;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace MainDashboard
 {
@@ -21,6 +23,18 @@ namespace MainDashboard
         {
             InitializeComponent();
         }
+
+        private void UC_AnaSayfa_Load(object sender, EventArgs e)
+        {
+            
+
+        }
+
+
+
+
+
+
 
         /*private void ChartDoldur(string _StoredProcedure)
         {
@@ -45,7 +59,7 @@ namespace MainDashboard
             chart1.Series["Maas"].YValueMembers = "maas";
             chart1.Titles.Add("Maaş Grafiği");
             con.Close();*/
-        
+
 
     }
 }

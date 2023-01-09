@@ -42,6 +42,7 @@
             this.btn_AnaSayfa = new Guna.UI2.WinForms.Guna2Button();
             this.panelDashboard = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(this.components);
+            this.btnAdmin = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // 
             this.guna2Panel1.AutoSize = true;
             this.guna2Panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.guna2Panel1.Controls.Add(this.btnAdmin);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.lblKullanici);
             this.guna2Panel1.Controls.Add(this.btn_Logout);
@@ -62,7 +64,7 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(221, 801);
+            this.guna2Panel1.Size = new System.Drawing.Size(218, 801);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -106,7 +108,7 @@
             this.btn_Logout.HoverState.ForeColor = System.Drawing.Color.Transparent;
             this.btn_Logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_Logout.Image")));
             this.btn_Logout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_Logout.Location = new System.Drawing.Point(38, 465);
+            this.btn_Logout.Location = new System.Drawing.Point(35, 516);
             this.btn_Logout.Name = "btn_Logout";
             this.btn_Logout.Size = new System.Drawing.Size(180, 45);
             this.btn_Logout.TabIndex = 8;
@@ -295,10 +297,40 @@
             this.panelDashboard.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelDashboard.BackColor = System.Drawing.SystemColors.Window;
             this.panelDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDashboard.Location = new System.Drawing.Point(221, 0);
+            this.panelDashboard.Location = new System.Drawing.Point(218, 0);
             this.panelDashboard.Name = "panelDashboard";
-            this.panelDashboard.Size = new System.Drawing.Size(1220, 801);
+            this.panelDashboard.Size = new System.Drawing.Size(1223, 801);
             this.panelDashboard.TabIndex = 1;
+            // 
+            // btnAdmin
+            // 
+            this.btnAdmin.Animated = true;
+            this.btnAdmin.AnimatedGIF = true;
+            this.btnAdmin.AutoRoundedCorners = true;
+            this.btnAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdmin.BorderRadius = 21;
+            this.btnAdmin.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAdmin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdmin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdmin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdmin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdmin.FillColor = System.Drawing.Color.Transparent;
+            this.btnAdmin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAdmin.ForeColor = System.Drawing.Color.Black;
+            this.btnAdmin.HoverState.FillColor = System.Drawing.Color.OrangeRed;
+            this.btnAdmin.HoverState.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAdmin.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin.Image")));
+            this.btnAdmin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAdmin.IndicateFocus = true;
+            this.btnAdmin.Location = new System.Drawing.Point(32, 465);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(180, 45);
+            this.btnAdmin.TabIndex = 10;
+            this.btnAdmin.Text = "Admin";
+            this.btnAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAdmin.TextOffset = new System.Drawing.Point(25, 0);
+            this.btnAdmin.Visible = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click_1);
             // 
             // DashBoard
             // 
@@ -337,6 +369,7 @@
         private Guna.UI2.WinForms.Guna2Button btn_Logout;
         private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblKullanici;
+        public Guna.UI2.WinForms.Guna2Button btnAdmin;
     }
 }
 

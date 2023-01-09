@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -48,9 +48,9 @@
             this.dtgMusteriIslemleri = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_Edit = new Guna.UI2.WinForms.Guna2Button();
             this.Musteri_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Firma_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Düzenle = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Sil = new System.Windows.Forms.DataGridViewButtonColumn();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -219,7 +219,7 @@
             this.btn_CustomerAdd.ForeColor = System.Drawing.Color.White;
             this.btn_CustomerAdd.Location = new System.Drawing.Point(32, 362);
             this.btn_CustomerAdd.Name = "btn_CustomerAdd";
-            this.btn_CustomerAdd.Size = new System.Drawing.Size(200, 43);
+            this.btn_CustomerAdd.Size = new System.Drawing.Size(199, 43);
             this.btn_CustomerAdd.TabIndex = 11;
             this.btn_CustomerAdd.Text = "Ekle";
             this.btn_CustomerAdd.Click += new System.EventHandler(this.btn_CustomerAdd_Click);
@@ -259,31 +259,30 @@
             this.dtgMusteriIslemleri.AllowUserToDeleteRows = false;
             this.dtgMusteriIslemleri.AllowUserToResizeColumns = false;
             this.dtgMusteriIslemleri.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
-            this.dtgMusteriIslemleri.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgMusteriIslemleri.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            this.dtgMusteriIslemleri.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgMusteriIslemleri.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dtgMusteriIslemleri.ColumnHeadersHeight = 15;
             this.dtgMusteriIslemleri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtgMusteriIslemleri.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Musteri_id,
             this.Firma_id,
-            this.Düzenle,
             this.Sil});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgMusteriIslemleri.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgMusteriIslemleri.DefaultCellStyle = dataGridViewCellStyle9;
             this.dtgMusteriIslemleri.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgMusteriIslemleri.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
             this.dtgMusteriIslemleri.Location = new System.Drawing.Point(0, 0);
@@ -327,6 +326,7 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.btn_Edit);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel8);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel2.Controls.Add(this.btn_CustomerAdd);
@@ -343,6 +343,27 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(268, 684);
             this.guna2Panel2.TabIndex = 12;
+            // 
+            // btn_Edit
+            // 
+            this.btn_Edit.Animated = true;
+            this.btn_Edit.AutoRoundedCorners = true;
+            this.btn_Edit.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Edit.BorderRadius = 20;
+            this.btn_Edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Edit.Enabled = false;
+            this.btn_Edit.FillColor = System.Drawing.Color.Orchid;
+            this.btn_Edit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Edit.ForeColor = System.Drawing.Color.White;
+            this.btn_Edit.Location = new System.Drawing.Point(33, 423);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.Size = new System.Drawing.Size(199, 43);
+            this.btn_Edit.TabIndex = 12;
+            this.btn_Edit.Text = "Düzenle";
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // Musteri_id
             // 
@@ -362,24 +383,14 @@
             this.Firma_id.ReadOnly = true;
             this.Firma_id.Visible = false;
             // 
-            // Düzenle
-            // 
-            this.Düzenle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Düzenle.HeaderText = "Düzenle";
-            this.Düzenle.MinimumWidth = 15;
-            this.Düzenle.Name = "Düzenle";
-            this.Düzenle.ReadOnly = true;
-            this.Düzenle.Text = "Düzenle";
-            this.Düzenle.Width = 50;
-            // 
             // Sil
             // 
             this.Sil.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
             this.Sil.HeaderText = "Sil";
-            this.Sil.MinimumWidth = 15;
             this.Sil.Name = "Sil";
             this.Sil.ReadOnly = true;
             this.Sil.Text = "Sil";
+            this.Sil.UseColumnTextForButtonValue = true;
             this.Sil.Width = 22;
             // 
             // UC_Musteri_Islemleri
@@ -419,9 +430,9 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2Button btn_Edit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Musteri_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Firma_id;
-        private System.Windows.Forms.DataGridViewButtonColumn Düzenle;
         private System.Windows.Forms.DataGridViewButtonColumn Sil;
     }
 }

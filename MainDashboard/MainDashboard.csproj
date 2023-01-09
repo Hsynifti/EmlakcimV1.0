@@ -54,8 +54,8 @@
     <Reference Include="Guna.Charts.WinForms, Version=1.0.4.0, Culture=neutral, PublicKeyToken=70866663edbc6595, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.Charts.WinForms.1.0.4\lib\net40\Guna.Charts.WinForms.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.UI2, Version=2.0.3.9, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.9\lib\net472\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.UI2, Version=2.0.4.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -94,6 +94,12 @@
     <Compile Include="frmSatis.Designer.cs">
       <DependentUpon>frmSatis.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Admin.Designer.cs">
+      <DependentUpon>UC_Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_AnaSayfa.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,6 +117,18 @@
     </Compile>
     <Compile Include="UC_Hesap.Designer.cs">
       <DependentUpon>UC_Hesap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_KullaniciEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_KullaniciEkle.Designer.cs">
+      <DependentUpon>UC_KullaniciEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_KullaniciUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_KullaniciUpdate.Designer.cs">
+      <DependentUpon>UC_KullaniciUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Mulkiyetler.cs">
       <SubType>UserControl</SubType>
@@ -147,6 +165,9 @@
     <EmbeddedResource Include="frmSatis.resx">
       <DependentUpon>frmSatis.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Admin.resx">
+      <DependentUpon>UC_Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_AnaSayfa.resx">
       <DependentUpon>UC_AnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +176,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Hesap.resx">
       <DependentUpon>UC_Hesap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_KullaniciEkle.resx">
+      <DependentUpon>UC_KullaniciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_KullaniciUpdate.resx">
+      <DependentUpon>UC_KullaniciUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Mulkiyetler.resx">
       <DependentUpon>UC_Mulkiyetler.cs</DependentUpon>

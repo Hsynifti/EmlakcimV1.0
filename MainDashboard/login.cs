@@ -46,6 +46,7 @@ namespace MainDashboard
             string K_Adi = Convert.ToString(genel.Veri("Kullanici @username='" +User.User_Name+ "',@pass='" +User.Password+ "'", "user_name"));
             string Sifre = Convert.ToString(genel.Veri("Kullanici @username='" +User.User_Name+ "',@pass='" +User.Password+ "'", "pass"));
             bool Active = Convert.ToBoolean(genel.Veri("Kullanici @username='" + User.User_Name + "',@pass='" + User.Password + "'", "isActive"));
+            bool Admin = Convert.ToBoolean(genel.Veri("Kullanici @username='" + User.User_Name + "',@pass='" + User.Password + "'", "isAdmin"));
             User.User_Name = txt_username.Text;
             User.Password = txt_pass.Text;
             if (K_Adi == User.User_Name && Sifre == User.Password && Active == true)
@@ -53,6 +54,10 @@ namespace MainDashboard
                 dashboard.Show();
                 lblHata.Visible = false;
                 this.Hide();
+                if (Admin)
+                {
+                    dashboard.btnAdmin.Visible = true;
+                }
             }
             else if (Active == false)
             {

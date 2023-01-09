@@ -31,7 +31,7 @@ namespace MainDashboard
         private void UC_Satislar_Load(object sender, EventArgs e)
         {
             //SATISLAR DATAGRİDVİEW
-            genel.listele("satislar @FirmaId = '"+firmaId+"'", guna2DataGridView1);
+            genel.listele("satislar @FirmaId = '"+firmaId+"'", dtg_Satislar);
         }
     }
 }

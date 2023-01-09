@@ -40,8 +40,13 @@ namespace MainDashboard
             genel.cmbdoldur("Durum", "Durum_id", "Durum_Getir", cmbEmlak_Durum);
             //emlak tipi
             genel.cmbdoldur("Emlaktipiadi", "Emlaktipi_id", "Tip_Getir", cmbEmlak_Tipi);
+            listele();
+        }
+        public void listele()
+        {
             //EMLAK LİSTELEME
             genel.listele("execute emlaklar @FirmaId ='"+firmaId+"'", dtg_Emlaklar);
+
         }
 
         private void guna2ComboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,7 +100,7 @@ namespace MainDashboard
                     genel.listele("emlakincele @emlak_id='" + emlakid + "'", frmSatis.guna2DataGridView1);
                     frmSatis.ShowDialog();
                 }
-
+                
             }
         }
     }

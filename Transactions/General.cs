@@ -59,7 +59,7 @@ namespace Transactions
             clbox.DisplayMember = _DisplayMember;
             clbox.ValueMember = _ValueMember;
         }
-        //EKLEME
+        //EKLEME ve GÜNCELLEME
         public void ekle(string _StoredProcedure)
         {
             SqlCommand Ekle = new SqlCommand(_StoredProcedure, ac.baglanti());
@@ -98,7 +98,7 @@ namespace Transactions
             ac.baglanti().Close();
             return veri;
         }
-        public void Counter(string _StoredProcedure,IGunaChart gunaChart)
+        public void Counter(string _StoredProcedure,GunaPieDataset data)
         {
             DataSet ds = new DataSet();
             using (SqlConnection conn = ac.baglanti())

@@ -44,7 +44,7 @@ namespace MainDashboard
             try
             {
                 //checkedlistbox secili itemleri aralarına "," atarak degiskene aktarır
-                string esyalar="";
+                string esyalar=",";
                 foreach (string s in lstEsyalar.CheckedItems)
                 {
                     esyalar += s + ",";
@@ -59,7 +59,7 @@ namespace MainDashboard
                     "@metrekare='"+int.Parse(txtMetrekare.Text)+"'," +
                     "@cephe='"+cmb_Cephe.Text+"'," +
                     "@kat='"+int.Parse(txtKat.Text)+"'," +
-                    "@yapiyasi='"+txtYapi_Yasi.Text+"'," +
+                    "@yapiyasi='"+int.Parse(txtYapi_Yasi.Text)+"'," +
                     "@odasayisi='"+txtOda_Sayisi.Text+"'," +
                     "@fiyat='"+Convert.ToInt32(txtSatisFiyati.Text)+"'," +
                     "@SatinAlinanFiyat='" + Convert.ToInt32(txtSatinAlinanFiyat.Text) + "'," +

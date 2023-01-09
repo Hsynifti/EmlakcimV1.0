@@ -24,6 +24,7 @@ namespace MainDashboard
         SQLAcces bgl=new SQLAcces();
         General genel=new General();
         
+        
         //Musteri_id 
         int MusteriID=-1;
         private void rdYeni_CheckedChanged(object sender, EventArgs e)
@@ -67,6 +68,7 @@ namespace MainDashboard
                 txtMusteriadi.Text = txtMusteriSoyadi.Text = txtMusteriIletisim.Text =TCKmlktxt.Text= "";
                 MusteriID = -1;
             }
+            
         }
 
         private void dtgMusteriler_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -89,6 +91,12 @@ namespace MainDashboard
         }
 
         private void dtgMusteriler_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
+        private void frmSatis_Activated(object sender, EventArgs e)
         {
 
         }
