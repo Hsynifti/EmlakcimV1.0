@@ -28,20 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtg_Users = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.KullaniciID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adı = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Soyadı = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.İletişim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirmaAdı = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KullanıcıAdı = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sifre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Profit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isActive = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isAdmin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,6 +51,16 @@
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.KullaniciID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adı = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Soyadı = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.İletişim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirmaAdı = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KullanıcıAdı = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sifre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isActive = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isAdmin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Users)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
@@ -71,16 +71,16 @@
             // 
             this.dtg_Users.AllowUserToAddRows = false;
             this.dtg_Users.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtg_Users.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_Users.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dtg_Users.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_Users.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtg_Users.ColumnHeadersHeight = 20;
             this.dtg_Users.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.KullaniciID,
@@ -93,14 +93,14 @@
             this.Profit,
             this.isActive,
             this.isAdmin});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_Users.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_Users.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtg_Users.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtg_Users.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtg_Users.Location = new System.Drawing.Point(0, 0);
@@ -132,77 +132,6 @@
             this.dtg_Users.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtg_Users.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtg_Users.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_Users_CellContentClick);
-            // 
-            // KullaniciID
-            // 
-            this.KullaniciID.DataPropertyName = "Kullanici_id";
-            this.KullaniciID.HeaderText = "Column1";
-            this.KullaniciID.Name = "KullaniciID";
-            this.KullaniciID.ReadOnly = true;
-            this.KullaniciID.Visible = false;
-            // 
-            // Adı
-            // 
-            this.Adı.DataPropertyName = "Kullaniciadi";
-            this.Adı.HeaderText = "Adı";
-            this.Adı.Name = "Adı";
-            this.Adı.ReadOnly = true;
-            // 
-            // Soyadı
-            // 
-            this.Soyadı.DataPropertyName = "Kullanicisoyadi";
-            this.Soyadı.HeaderText = "Soyadı";
-            this.Soyadı.Name = "Soyadı";
-            this.Soyadı.ReadOnly = true;
-            // 
-            // İletişim
-            // 
-            this.İletişim.DataPropertyName = "Iletisim";
-            this.İletişim.HeaderText = "İletişim";
-            this.İletişim.Name = "İletişim";
-            this.İletişim.ReadOnly = true;
-            // 
-            // FirmaAdı
-            // 
-            this.FirmaAdı.DataPropertyName = "Firma_Adi";
-            this.FirmaAdı.HeaderText = "Firma Adı";
-            this.FirmaAdı.Name = "FirmaAdı";
-            this.FirmaAdı.ReadOnly = true;
-            // 
-            // KullanıcıAdı
-            // 
-            this.KullanıcıAdı.DataPropertyName = "user_name";
-            this.KullanıcıAdı.HeaderText = "Kullanıcı Adı";
-            this.KullanıcıAdı.Name = "KullanıcıAdı";
-            this.KullanıcıAdı.ReadOnly = true;
-            // 
-            // Sifre
-            // 
-            this.Sifre.DataPropertyName = "pass";
-            this.Sifre.HeaderText = "Şifre";
-            this.Sifre.Name = "Sifre";
-            this.Sifre.ReadOnly = true;
-            // 
-            // Profit
-            // 
-            this.Profit.DataPropertyName = "Profit";
-            this.Profit.HeaderText = "Hesaptaki Para";
-            this.Profit.Name = "Profit";
-            this.Profit.ReadOnly = true;
-            // 
-            // isActive
-            // 
-            this.isActive.DataPropertyName = "isActive";
-            this.isActive.HeaderText = "Aktif";
-            this.isActive.Name = "isActive";
-            this.isActive.ReadOnly = true;
-            // 
-            // isAdmin
-            // 
-            this.isAdmin.DataPropertyName = "isAdmin";
-            this.isAdmin.HeaderText = "Admin";
-            this.isAdmin.Name = "isAdmin";
-            this.isAdmin.ReadOnly = true;
             // 
             // guna2Panel1
             // 
@@ -483,6 +412,78 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1070, 776);
             this.guna2Panel2.TabIndex = 2;
+            // 
+            // KullaniciID
+            // 
+            this.KullaniciID.DataPropertyName = "Kullanici_id";
+            this.KullaniciID.HeaderText = "Column1";
+            this.KullaniciID.Name = "KullaniciID";
+            this.KullaniciID.ReadOnly = true;
+            this.KullaniciID.Visible = false;
+            // 
+            // Adı
+            // 
+            this.Adı.DataPropertyName = "Kullaniciadi";
+            this.Adı.HeaderText = "Adı";
+            this.Adı.Name = "Adı";
+            this.Adı.ReadOnly = true;
+            // 
+            // Soyadı
+            // 
+            this.Soyadı.DataPropertyName = "Kullanicisoyadi";
+            this.Soyadı.HeaderText = "Soyadı";
+            this.Soyadı.Name = "Soyadı";
+            this.Soyadı.ReadOnly = true;
+            // 
+            // İletişim
+            // 
+            this.İletişim.DataPropertyName = "Iletisim";
+            this.İletişim.HeaderText = "İletişim";
+            this.İletişim.Name = "İletişim";
+            this.İletişim.ReadOnly = true;
+            // 
+            // FirmaAdı
+            // 
+            this.FirmaAdı.DataPropertyName = "Firma_Adi";
+            this.FirmaAdı.HeaderText = "Firma Adı";
+            this.FirmaAdı.Name = "FirmaAdı";
+            this.FirmaAdı.ReadOnly = true;
+            // 
+            // KullanıcıAdı
+            // 
+            this.KullanıcıAdı.DataPropertyName = "user_name";
+            this.KullanıcıAdı.HeaderText = "Kullanıcı Adı";
+            this.KullanıcıAdı.Name = "KullanıcıAdı";
+            this.KullanıcıAdı.ReadOnly = true;
+            // 
+            // Sifre
+            // 
+            this.Sifre.DataPropertyName = "pass";
+            this.Sifre.HeaderText = "Şifre";
+            this.Sifre.Name = "Sifre";
+            this.Sifre.ReadOnly = true;
+            this.Sifre.Visible = false;
+            // 
+            // Profit
+            // 
+            this.Profit.DataPropertyName = "Profit";
+            this.Profit.HeaderText = "Hesaptaki Para";
+            this.Profit.Name = "Profit";
+            this.Profit.ReadOnly = true;
+            // 
+            // isActive
+            // 
+            this.isActive.DataPropertyName = "isActive";
+            this.isActive.HeaderText = "Aktif";
+            this.isActive.Name = "isActive";
+            this.isActive.ReadOnly = true;
+            // 
+            // isAdmin
+            // 
+            this.isAdmin.DataPropertyName = "isAdmin";
+            this.isAdmin.HeaderText = "Admin";
+            this.isAdmin.Name = "isAdmin";
+            this.isAdmin.ReadOnly = true;
             // 
             // UC_KullaniciUpdate
             // 

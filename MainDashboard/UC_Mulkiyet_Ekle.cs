@@ -112,14 +112,6 @@ namespace MainDashboard
         {
 
         }
-        //Eşyalı mı combobox , GEREK YOK SİLİNMELİ m.
-        private void guna2ComboBox7_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (guna2ComboBox7.Text == "Evet")
-                lstEsyalar.Enabled = true;
-            else
-                lstEsyalar.Enabled = false;
-        }
 
         private void lstEsyalar_SelectedIndexChanged(object sender, EventArgs e)
         {

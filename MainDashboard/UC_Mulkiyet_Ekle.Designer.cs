@@ -55,8 +55,6 @@
             this.guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lstEsyalar = new System.Windows.Forms.CheckedListBox();
             this.guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2ComboBox7 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmbEmlak_Durum = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtIsitma = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -206,7 +204,7 @@
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(20, 586);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(20, 588);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(71, 15);
             this.guna2HtmlLabel7.TabIndex = 13;
@@ -224,11 +222,12 @@
             this.txtAdres.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAdres.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAdres.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAdres.Location = new System.Drawing.Point(20, 613);
+            this.txtAdres.Location = new System.Drawing.Point(20, 615);
             this.txtAdres.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.PasswordChar = '\0';
             this.txtAdres.PlaceholderText = "";
+            this.txtAdres.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.txtAdres.SelectedText = "";
             this.txtAdres.Size = new System.Drawing.Size(200, 125);
             this.txtAdres.TabIndex = 8;
@@ -253,9 +252,7 @@
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2Panel1.Controls.Add(this.lstEsyalar);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel19);
-            this.guna2Panel1.Controls.Add(this.guna2ComboBox7);
             this.guna2Panel1.Controls.Add(this.cmbEmlak_Turu);
-            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel14);
             this.guna2Panel1.Controls.Add(this.cmbEmlak_Durum);
             this.guna2Panel1.Controls.Add(this.txtIsitma);
             this.guna2Panel1.Controls.Add(this.txtAdres);
@@ -287,7 +284,7 @@
             // 
             this.guna2HtmlLabel22.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel22.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel22.Location = new System.Drawing.Point(702, 290);
+            this.guna2HtmlLabel22.Location = new System.Drawing.Point(702, 338);
             this.guna2HtmlLabel22.Name = "guna2HtmlLabel22";
             this.guna2HtmlLabel22.Size = new System.Drawing.Size(14, 27);
             this.guna2HtmlLabel22.TabIndex = 23;
@@ -304,7 +301,7 @@
             this.txtSatinAlinanFiyat.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSatinAlinanFiyat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSatinAlinanFiyat.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSatinAlinanFiyat.Location = new System.Drawing.Point(496, 281);
+            this.txtSatinAlinanFiyat.Location = new System.Drawing.Point(496, 329);
             this.txtSatinAlinanFiyat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSatinAlinanFiyat.Name = "txtSatinAlinanFiyat";
             this.txtSatinAlinanFiyat.PasswordChar = '\0';
@@ -316,7 +313,7 @@
             // guna2HtmlLabel21
             // 
             this.guna2HtmlLabel21.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel21.Location = new System.Drawing.Point(492, 254);
+            this.guna2HtmlLabel21.Location = new System.Drawing.Point(492, 302);
             this.guna2HtmlLabel21.Name = "guna2HtmlLabel21";
             this.guna2HtmlLabel21.Size = new System.Drawing.Size(84, 15);
             this.guna2HtmlLabel21.TabIndex = 21;
@@ -334,7 +331,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(496, 479);
+            this.guna2Button1.Location = new System.Drawing.Point(598, 474);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 18;
@@ -364,7 +361,7 @@
             // 
             this.guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel18.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2HtmlLabel18.Location = new System.Drawing.Point(702, 360);
+            this.guna2HtmlLabel18.Location = new System.Drawing.Point(702, 408);
             this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
             this.guna2HtmlLabel18.Size = new System.Drawing.Size(14, 27);
             this.guna2HtmlLabel18.TabIndex = 20;
@@ -381,7 +378,7 @@
             this.txtSatisFiyati.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSatisFiyati.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSatisFiyati.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSatisFiyati.Location = new System.Drawing.Point(496, 351);
+            this.txtSatisFiyati.Location = new System.Drawing.Point(496, 399);
             this.txtSatisFiyati.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSatisFiyati.Name = "txtSatisFiyati";
             this.txtSatisFiyati.PasswordChar = '\0';
@@ -410,7 +407,7 @@
             // guna2HtmlLabel17
             // 
             this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel17.Location = new System.Drawing.Point(496, 330);
+            this.guna2HtmlLabel17.Location = new System.Drawing.Point(496, 378);
             this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
             this.guna2HtmlLabel17.Size = new System.Drawing.Size(53, 15);
             this.guna2HtmlLabel17.TabIndex = 18;
@@ -437,7 +434,7 @@
             // guna2HtmlLabel15
             // 
             this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel15.Location = new System.Drawing.Point(492, 135);
+            this.guna2HtmlLabel15.Location = new System.Drawing.Point(492, 142);
             this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
             this.guna2HtmlLabel15.Size = new System.Drawing.Size(153, 15);
             this.guna2HtmlLabel15.TabIndex = 14;
@@ -463,10 +460,10 @@
             "Televizyon",
             "Yatak",
             "Yemek Masası"});
-            this.lstEsyalar.Location = new System.Drawing.Point(492, 157);
+            this.lstEsyalar.Location = new System.Drawing.Point(492, 164);
             this.lstEsyalar.MultiColumn = true;
             this.lstEsyalar.Name = "lstEsyalar";
-            this.lstEsyalar.Size = new System.Drawing.Size(286, 64);
+            this.lstEsyalar.Size = new System.Drawing.Size(286, 109);
             this.lstEsyalar.TabIndex = 16;
             this.lstEsyalar.SelectedIndexChanged += new System.EventHandler(this.lstEsyalar_SelectedIndexChanged);
             // 
@@ -478,34 +475,6 @@
             this.guna2HtmlLabel19.Size = new System.Drawing.Size(102, 15);
             this.guna2HtmlLabel19.TabIndex = 16;
             this.guna2HtmlLabel19.Text = "Emlağın Bulunduğu İl";
-            // 
-            // guna2ComboBox7
-            // 
-            this.guna2ComboBox7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox7.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox7.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox7.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox7.ItemHeight = 30;
-            this.guna2ComboBox7.Items.AddRange(new object[] {
-            "Evet",
-            "Hayır"});
-            this.guna2ComboBox7.Location = new System.Drawing.Point(492, 84);
-            this.guna2ComboBox7.Name = "guna2ComboBox7";
-            this.guna2ComboBox7.Size = new System.Drawing.Size(184, 36);
-            this.guna2ComboBox7.TabIndex = 15;
-            this.guna2ComboBox7.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox7_SelectedIndexChanged);
-            // 
-            // guna2HtmlLabel14
-            // 
-            this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel14.Location = new System.Drawing.Point(492, 62);
-            this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-            this.guna2HtmlLabel14.Size = new System.Drawing.Size(50, 15);
-            this.guna2HtmlLabel14.TabIndex = 11;
-            this.guna2HtmlLabel14.Text = "Eşyalı Mı?";
             // 
             // cmbEmlak_Durum
             // 
@@ -535,7 +504,7 @@
             this.txtIsitma.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtIsitma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.txtIsitma.ItemHeight = 30;
-            this.txtIsitma.Location = new System.Drawing.Point(246, 488);
+            this.txtIsitma.Location = new System.Drawing.Point(496, 93);
             this.txtIsitma.Name = "txtIsitma";
             this.txtIsitma.Size = new System.Drawing.Size(184, 36);
             this.txtIsitma.TabIndex = 14;
@@ -543,7 +512,7 @@
             // guna2HtmlLabel13
             // 
             this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(246, 457);
+            this.guna2HtmlLabel13.Location = new System.Drawing.Point(496, 62);
             this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
             this.guna2HtmlLabel13.Size = new System.Drawing.Size(30, 15);
             this.guna2HtmlLabel13.TabIndex = 9;
@@ -729,8 +698,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel16;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel15;
         private System.Windows.Forms.CheckedListBox lstEsyalar;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox7;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
         private Guna.UI2.WinForms.Guna2ComboBox txtIsitma;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
