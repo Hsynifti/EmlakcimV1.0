@@ -95,11 +95,6 @@ namespace MainDashboard
             uC_AnaSayfa.firmaId = firmaId;
             addusercontrol(uC_AnaSayfa);
         }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         //çıkış onayı
         private void DashBoard_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -112,17 +107,6 @@ namespace MainDashboard
             else
                 e.Cancel = true;
         }
-
-        private void lblKullanici_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAdmin_Click_1(object sender, EventArgs e)
         {
             UC_Admin uC_Admin = new UC_Admin(firmaId);

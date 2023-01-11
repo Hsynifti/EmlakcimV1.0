@@ -38,27 +38,6 @@ namespace Transactions
             cmb.ValueMember = _ValueMember;
             
         }
-        //CHECKEDLİSTBOX VERİ AKTARMA
-        public void cboxdoldur(string _DisplayMember, string _ValueMember, string _StoredProcedure, CheckedListBox clbox)
-        {
-            DataTable dtb = new DataTable();
-            using (SqlConnection conn = ac.baglanti())
-            {
-                using (SqlCommand cmd = conn.CreateCommand())
-                {
-                    cmd.CommandText = _StoredProcedure;
-                    using (SqlDataAdapter adap = new SqlDataAdapter(cmd))
-                    {
-                        adap.Fill(dtb);
-                    }
-                }
-                conn.Close();
-
-            }
-            clbox.DataSource = dtb;
-            clbox.DisplayMember = _DisplayMember;
-            clbox.ValueMember = _ValueMember;
-        }
         //EKLEME ve GÜNCELLEME
         public void ekle(string _StoredProcedure)
         {
@@ -97,23 +76,6 @@ namespace Transactions
             }
             ac.baglanti().Close();
             return veri;
-        }
-        public void Counter(string _StoredProcedure,GunaPieDataset data)
-        {
-            DataSet ds = new DataSet();
-            using (SqlConnection conn = ac.baglanti())
-            {
-                using (SqlCommand cmd = conn.CreateCommand())
-                {
-                    cmd.CommandText = _StoredProcedure;
-                    using (SqlDataAdapter adap = new SqlDataAdapter(cmd))
-                    {
-                        adap.Fill(ds);
-                    }
-                }
-                conn.Close();
-
-            }
         }
         
     }

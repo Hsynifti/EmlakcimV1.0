@@ -66,7 +66,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(218, 801);
             this.guna2Panel1.TabIndex = 0;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // btnAdmin
             // 
@@ -118,7 +117,6 @@
             this.lblKullanici.Size = new System.Drawing.Size(76, 21);
             this.lblKullanici.TabIndex = 9;
             this.lblKullanici.Text = "Kullanici Adi";
-            this.lblKullanici.Click += new System.EventHandler(this.lblKullanici_Click);
             // 
             // btn_Logout
             // 

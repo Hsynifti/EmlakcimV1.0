@@ -49,6 +49,7 @@
             this.dtgEmlakSatis = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firmaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aktif = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpVarolan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMusteriler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmlakSatis)).BeginInit();
@@ -105,7 +106,8 @@
             this.dtgMusteriler.ColumnHeadersHeight = 30;
             this.dtgMusteriler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
-            this.firmaid});
+            this.firmaid,
+            this.aktif});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -147,7 +149,6 @@
             this.dtgMusteriler.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgMusteriler.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtgMusteriler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMusteriler_CellClick);
-            this.dtgMusteriler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgMusteriler_CellContentClick);
             // 
             // txtMusteriadi
             // 
@@ -364,6 +365,14 @@
             this.firmaid.ReadOnly = true;
             this.firmaid.Visible = false;
             // 
+            // aktif
+            // 
+            this.aktif.DataPropertyName = "isActive";
+            this.aktif.HeaderText = "Column2";
+            this.aktif.Name = "aktif";
+            this.aktif.ReadOnly = true;
+            this.aktif.Visible = false;
+            // 
             // frmSatis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,7 +396,6 @@
             this.Name = "frmSatis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Satış Ekranı";
-            this.Activated += new System.EventHandler(this.frmSatis_Activated);
             this.Load += new System.EventHandler(this.satis_Load);
             this.grpVarolan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgMusteriler)).EndInit();
@@ -414,5 +422,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn isActive;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn firmaid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aktif;
     }
 }

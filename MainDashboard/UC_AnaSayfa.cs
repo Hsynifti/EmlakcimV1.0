@@ -44,11 +44,6 @@ namespace MainDashboard
             Emlaklar(chrtEmlaklar);
             EmlakDurumlar(chrtEmlakDurum);
         }
-
-        private void gunaChart1_Load(object sender, EventArgs e)
-        {
-
-        }
         public void Emlaklar(Guna.Charts.WinForms.GunaChart chart)
         {
 

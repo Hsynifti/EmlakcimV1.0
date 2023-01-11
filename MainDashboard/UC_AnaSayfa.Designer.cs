@@ -108,7 +108,6 @@
             chartFont8.FontName = "Arial";
             tick3.Font = chartFont8;
             this.chrtEmlaklar.ZAxes.Ticks = tick3;
-            this.chrtEmlaklar.Load += new System.EventHandler(this.gunaChart1_Load);
             // 
             // chrtEmlakDurum
             // 

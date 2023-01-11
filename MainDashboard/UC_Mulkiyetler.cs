@@ -21,7 +21,7 @@ namespace MainDashboard
         frmİncele frmIncele = new frmİncele();
         public UC_Mulkiyetler()
         {
-            frmSatis = new frmSatis(firmaId);
+            frmSatis = new frmSatis();
             InitializeComponent();
         }
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -98,8 +98,10 @@ namespace MainDashboard
                 {
                     genel.listele("emlakincele @emlak_id='" + emlakid + "'", frmSatis.dtgEmlakSatis);
                     frmSatis.ShowDialog();
+                    frmSatis.firmaId = firmaId;
+
                 }
-                
+
             }
         }
     }

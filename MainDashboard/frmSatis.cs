@@ -15,30 +15,19 @@ namespace MainDashboard
 {
     public partial class frmSatis : Form
     {
+        SQLAcces bgl = new SQLAcces();
+        General genel = new General();
         public int firmaId { get; set; }
-        public frmSatis(int firma_id)
+        public frmSatis()
         {
-            firmaId = firma_id;
             InitializeComponent();
         }
-        SQLAcces bgl=new SQLAcces();
-        General genel=new General();
-        
-        
         //Musteri_id 
         int MusteriID=-1;
-        private void rdYeni_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
         private void satis_Load(object sender, EventArgs e)
         {
             //MUSTERİ LİSTELEME
-            genel.listele("execute musterilistele @FirmaId ='" + firmaId + "'", dtgMusteriler);
-        }
-
-        private void rdVarolan_CheckedChanged(object sender, EventArgs e)
-        {
+            genel.listele("musterilistele @FirmaId ='" + firmaId + "'", dtgMusteriler);
         }
         //sat butonu:eğer emlak boş değilse uyarı verip satışı yapmaz
         private void btnSat_Click(object sender, EventArgs e)
@@ -79,26 +68,6 @@ namespace MainDashboard
             txtMusteriSoyadi.Text = dtgMusteriler.Rows[secilen].Cells[3].Value.ToString();
             txtMusteriIletisim.Text = dtgMusteriler.Rows[secilen].Cells[4].Value.ToString();
             TCKmlktxt.Text = dtgMusteriler.Rows[secilen].Cells[5].Value.ToString();
-        }
-
-        private void txtIletisim_TextChanged(object sender, EventArgs e)
-        {            
-        }
-
-        private void txtTcKmlk_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void dtgMusteriler_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-        private void frmSatis_Activated(object sender, EventArgs e)
-        {
-
         }
     }
 }
