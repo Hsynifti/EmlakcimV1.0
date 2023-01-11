@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAdmin = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblKullanici = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_Logout = new Guna.UI2.WinForms.Guna2Button();
@@ -42,7 +43,6 @@
             this.btn_AnaSayfa = new Guna.UI2.WinForms.Guna2Button();
             this.panelDashboard = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(this.components);
-            this.btnAdmin = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +67,36 @@
             this.guna2Panel1.Size = new System.Drawing.Size(218, 801);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // btnAdmin
+            // 
+            this.btnAdmin.Animated = true;
+            this.btnAdmin.AnimatedGIF = true;
+            this.btnAdmin.AutoRoundedCorners = true;
+            this.btnAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdmin.BorderRadius = 21;
+            this.btnAdmin.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAdmin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdmin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdmin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdmin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdmin.FillColor = System.Drawing.Color.Transparent;
+            this.btnAdmin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAdmin.ForeColor = System.Drawing.Color.Black;
+            this.btnAdmin.HoverState.FillColor = System.Drawing.Color.OrangeRed;
+            this.btnAdmin.HoverState.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAdmin.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin.Image")));
+            this.btnAdmin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAdmin.IndicateFocus = true;
+            this.btnAdmin.Location = new System.Drawing.Point(32, 465);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(180, 45);
+            this.btnAdmin.TabIndex = 10;
+            this.btnAdmin.Text = "Admin";
+            this.btnAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAdmin.TextOffset = new System.Drawing.Point(25, 0);
+            this.btnAdmin.Visible = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click_1);
             // 
             // guna2PictureBox1
             // 
@@ -302,36 +332,6 @@
             this.panelDashboard.Size = new System.Drawing.Size(1223, 801);
             this.panelDashboard.TabIndex = 1;
             // 
-            // btnAdmin
-            // 
-            this.btnAdmin.Animated = true;
-            this.btnAdmin.AnimatedGIF = true;
-            this.btnAdmin.AutoRoundedCorners = true;
-            this.btnAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.btnAdmin.BorderRadius = 21;
-            this.btnAdmin.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAdmin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdmin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdmin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdmin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdmin.FillColor = System.Drawing.Color.Transparent;
-            this.btnAdmin.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAdmin.ForeColor = System.Drawing.Color.Black;
-            this.btnAdmin.HoverState.FillColor = System.Drawing.Color.OrangeRed;
-            this.btnAdmin.HoverState.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAdmin.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin.Image")));
-            this.btnAdmin.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAdmin.IndicateFocus = true;
-            this.btnAdmin.Location = new System.Drawing.Point(32, 465);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(180, 45);
-            this.btnAdmin.TabIndex = 10;
-            this.btnAdmin.Text = "Admin";
-            this.btnAdmin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAdmin.TextOffset = new System.Drawing.Point(25, 0);
-            this.btnAdmin.Visible = false;
-            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click_1);
-            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -360,7 +360,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel panelDashboard;
-        private Guna.UI2.WinForms.Guna2Button btn_AnaSayfa;
         private Guna.UI2.WinForms.Guna2Button btn_Satislar;
         private Guna.UI2.WinForms.Guna2Button btn_MulkiyetEkle;
         private Guna.UI2.WinForms.Guna2Button btn_Mulkiyetler;
@@ -370,6 +369,7 @@
         private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;
         public Guna.UI2.WinForms.Guna2HtmlLabel lblKullanici;
         public Guna.UI2.WinForms.Guna2Button btnAdmin;
+        public Guna.UI2.WinForms.Guna2Button btn_AnaSayfa;
     }
 }
 

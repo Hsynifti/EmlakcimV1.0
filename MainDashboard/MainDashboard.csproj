@@ -118,18 +118,6 @@
     <Compile Include="UC_Hesap.Designer.cs">
       <DependentUpon>UC_Hesap.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_KullaniciEkle.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_KullaniciEkle.Designer.cs">
-      <DependentUpon>UC_KullaniciEkle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UC_KullaniciUpdate.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UC_KullaniciUpdate.Designer.cs">
-      <DependentUpon>UC_KullaniciUpdate.cs</DependentUpon>
-    </Compile>
     <Compile Include="UC_Mulkiyetler.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -176,12 +164,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Hesap.resx">
       <DependentUpon>UC_Hesap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_KullaniciEkle.resx">
-      <DependentUpon>UC_KullaniciEkle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_KullaniciUpdate.resx">
-      <DependentUpon>UC_KullaniciUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Mulkiyetler.resx">
       <DependentUpon>UC_Mulkiyetler.cs</DependentUpon>

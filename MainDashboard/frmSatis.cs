@@ -34,7 +34,7 @@ namespace MainDashboard
         private void satis_Load(object sender, EventArgs e)
         {
             //MUSTERİ LİSTELEME
-            genel.listele("execute musterilistele @FirmaId ='"+firmaId+"'", dtgMusteriler);
+            genel.listele("execute musterilistele @FirmaId ='" + firmaId + "'", dtgMusteriler);
         }
 
         private void rdVarolan_CheckedChanged(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace MainDashboard
             }
             else
             {
-                int tabloemlakid = Convert.ToInt32(guna2DataGridView1.Rows[0].Cells[0].Value);
+                int tabloemlakid = Convert.ToInt32(dtgEmlakSatis.Rows[0].Cells[0].Value);
                 int EmlakID = -1;
                 //Satiş tablosundan belli bir Emlak_id'i çekilecek varsa değişkene atar yok ise üstteki mümkün olmayan negatif değer sabit kalır
                 EmlakID=Convert.ToInt32(genel.Veri("SatisEmlakID @EmlakId='"+tabloemlakid+"'", "Emlak_id"));

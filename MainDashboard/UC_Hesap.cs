@@ -16,9 +16,8 @@ namespace MainDashboard
         General genel = new General();
         User kullanici=new User();
         public int FirmaId { get; set; }
-        public UC_Hesap(int Firma_id)
+        public UC_Hesap()
         {
-            FirmaId = Firma_id;
             InitializeComponent();
         }
         void aktar()
@@ -60,7 +59,8 @@ namespace MainDashboard
             genel.ekle("Aktif_Pasif @aktif='" + 0 + "'," +
                 "@firmaId='"+FirmaId+"'");
             MessageBox.Show(kullanici.Company_Name.ToString()+" Hesabınız Donduruldu.", "Hesap Yetkisi Alındı!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Application.Exit();
+                // Application.Exit();
+                Environment.Exit(0);
             }
 
         }

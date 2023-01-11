@@ -17,9 +17,8 @@ namespace MainDashboard
         SQLAcces bgl = new SQLAcces();
         General genel=new General();
         public int firmaId { get; set; }
-        public UC_Satislar(int firma_id)
+        public UC_Satislar()
         {
-            firmaId = firma_id;
             InitializeComponent();
         }
 

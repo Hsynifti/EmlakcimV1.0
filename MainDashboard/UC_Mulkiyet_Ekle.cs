@@ -20,9 +20,8 @@ namespace MainDashboard
         General genel = new General();
         public int firmaId { get; set; }
 
-        public UC_Mulkiyet_Ekle(int firma_id)
+        public UC_Mulkiyet_Ekle()
         {
-            firmaId= firma_id;
             InitializeComponent();
         }
         private void UC_Mulkiyet_Ekle_Load(object sender, EventArgs e)

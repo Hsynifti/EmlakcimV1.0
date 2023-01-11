@@ -38,10 +38,7 @@ namespace MainDashboard
             User.Company_ID = Company.firmaId;
             User.Company_Name = Company.firma_adi;
             DashBoard dashboard = new DashBoard();
-            //FirmaId-kullaniciid alınır.
-            dashboard.firmaId = User.CompanyID_Getir();
-            //FirmaAdi alınır.
-            dashboard.Firma_Adi = User.CompanyName_Getir();
+            
             //kullanici adi, şifre ve aktiflik durumu
             string K_Adi = Convert.ToString(genel.Veri("Kullanici @username='" +User.User_Name+ "',@pass='" +User.Password+ "'", "user_name"));
             string Sifre = Convert.ToString(genel.Veri("Kullanici @username='" +User.User_Name+ "',@pass='" +User.Password+ "'", "pass"));
@@ -51,6 +48,10 @@ namespace MainDashboard
             User.Password = txt_pass.Text;
             if (K_Adi == User.User_Name && Sifre == User.Password && Active == true)
             {
+                //FirmaId-kullaniciid alınır.
+                dashboard.firmaId = User.CompanyID_Getir();
+                //FirmaAdi alınır.
+                dashboard.Firma_Adi = User.CompanyName_Getir();
                 dashboard.Show();
                 lblHata.Visible = false;
                 this.Hide();

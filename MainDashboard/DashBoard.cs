@@ -15,17 +15,23 @@ namespace MainDashboard
 {
     public partial class DashBoard : Form
     {
-        
-        public DashBoard()
-        {
-            
-            InitializeComponent();
-
-        }
         login giris = new login();
         //loginden kullanıcı ismi gelir
         public string Firma_Adi { get; set; }
         public int firmaId { get; set; }
+
+        UC_AnaSayfa uC_AnaSayfa;
+        UC_Mulkiyet_Ekle uC_Mulkiyet_Ekle;
+        UC_Mulkiyetler uC_Mulkiyetler;
+        UC_Musteri_Islemleri uC_MusteriEkle;
+        UC_Satislar uC_Satislar;
+        UC_Hesap uC_Hesap;
+
+        public DashBoard()
+        {
+            InitializeComponent();
+        }
+
         private void addusercontrol(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
@@ -36,37 +42,43 @@ namespace MainDashboard
 
         private void btn_AnaSayfa_Click(object sender, EventArgs e)
         {
-            UC_AnaSayfa uC_AnaSayfa = new UC_AnaSayfa();
+            uC_AnaSayfa = new UC_AnaSayfa();
+            uC_AnaSayfa.firmaId = firmaId;
             addusercontrol(uC_AnaSayfa);
         }
 
         private void btn_MulkiyetEkle_Click(object sender, EventArgs e)
         {
-            UC_Mulkiyet_Ekle uC_Mulkiyet_Ekle = new UC_Mulkiyet_Ekle(firmaId);
+            uC_Mulkiyet_Ekle = new UC_Mulkiyet_Ekle();
+            uC_Mulkiyet_Ekle.firmaId = firmaId;
             addusercontrol(uC_Mulkiyet_Ekle);
         }
 
         private void btn_Mulkiyetler_Click(object sender, EventArgs e)
         {
-            UC_Mulkiyetler uC_Mulkiyetler = new UC_Mulkiyetler(firmaId);
+            uC_Mulkiyetler = new UC_Mulkiyetler();
+            uC_Mulkiyetler.firmaId = firmaId;
             addusercontrol(uC_Mulkiyetler);
         }
 
         private void btn_MusteriIslemleri_Click(object sender, EventArgs e)
         {
-            UC_Musteri_Islemleri uC_MusteriEkle = new UC_Musteri_Islemleri(firmaId);
+            uC_MusteriEkle = new UC_Musteri_Islemleri();
+            uC_MusteriEkle.firmaId = firmaId;
             addusercontrol(uC_MusteriEkle);
         }
 
         private void btn_Satislar_Click(object sender, EventArgs e)
         {
-            UC_Satislar uC_Satislar = new UC_Satislar(firmaId);
+            uC_Satislar = new UC_Satislar();
+            uC_Satislar.firmaId = firmaId;
             addusercontrol(uC_Satislar);
         }
 
         private void btn_Hesap_Click(object sender, EventArgs e)
         {
-            UC_Hesap uC_Hesap = new UC_Hesap(firmaId);
+            uC_Hesap = new UC_Hesap();
+            uC_Hesap.FirmaId = firmaId;
             addusercontrol(uC_Hesap);
         }
 
@@ -79,6 +91,9 @@ namespace MainDashboard
         {
             //kullanıcı ismi
             lblKullanici.Text = Firma_Adi;
+            uC_AnaSayfa = new UC_AnaSayfa();
+            uC_AnaSayfa.firmaId = firmaId;
+            addusercontrol(uC_AnaSayfa);
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)

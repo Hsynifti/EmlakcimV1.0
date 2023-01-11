@@ -19,9 +19,8 @@ namespace MainDashboard
         public int firmaId { get; set; }
         frmSatis frmSatis;
         frmİncele frmIncele = new frmİncele();
-        public UC_Mulkiyetler(int firma_id)
+        public UC_Mulkiyetler()
         {
-            firmaId = firma_id;
             frmSatis = new frmSatis(firmaId);
             InitializeComponent();
         }
@@ -91,13 +90,13 @@ namespace MainDashboard
                 //incele
                 if (e.ColumnIndex == 0)
                 {
-                    genel.listele("emlakincele @emlak_id='" + emlakid + "'", frmIncele.guna2DataGridView1);
+                    genel.listele("emlakincele @emlak_id='" + emlakid + "'", frmIncele.dtgEmlak);
                     frmIncele.ShowDialog();
                 }
                 //satış
                 if (e.ColumnIndex == 1)
                 {
-                    genel.listele("emlakincele @emlak_id='" + emlakid + "'", frmSatis.guna2DataGridView1);
+                    genel.listele("emlakincele @emlak_id='" + emlakid + "'", frmSatis.dtgEmlakSatis);
                     frmSatis.ShowDialog();
                 }
                 
